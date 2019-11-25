@@ -374,85 +374,85 @@ button {
 
 @font-face {
   font-family: 'Alegreya Sans';
-  src: url("/fonts/subset-AlegreyaSans-BoldItalic.woff2") format("woff2"), url("/fonts/subset-AlegreyaSans-ExtraBoldItalic.woff") format("woff");
+  src: url("../fonts/subset-AlegreyaSans-BoldItalic.woff2") format("woff2"), url("../fonts/subset-AlegreyaSans-ExtraBoldItalic.woff") format("woff");
   font-weight: bold;
   font-style: italic; }
 
 @font-face {
   font-family: 'Alegreya Sans';
-  src: url("/fonts/subset-AlegreyaSans-Thin.woff2") format("woff2"), url("/fonts/subset-AlegreyaSans-Thin.woff") format("woff");
+  src: url("../fonts/subset-AlegreyaSans-Thin.woff2") format("woff2"), url("../fonts/subset-AlegreyaSans-Thin.woff") format("woff");
   font-weight: 100;
   font-style: normal; }
 
 @font-face {
   font-family: 'Alegreya Sans';
-  src: url("/fonts/subset-AlegreyaSans-Medium.woff2") format("woff2"), url("/fonts/subset-AlegreyaSans-Medium.woff") format("woff");
+  src: url("../fonts/subset-AlegreyaSans-Medium.woff2") format("woff2"), url("../fonts/subset-AlegreyaSans-Medium.woff") format("woff");
   font-weight: 500;
   font-style: normal; }
 
 @font-face {
   font-family: 'Alegreya Sans';
-  src: url("/fonts/subset-AlegreyaSans-ExtraBoldItalic.woff2") format("woff2"), url("/fonts/subset-AlegreyaSans-ExtraBoldItalic.woff") format("woff");
+  src: url("../fonts/subset-AlegreyaSans-ExtraBoldItalic.woff2") format("woff2"), url("../fonts/subset-AlegreyaSans-ExtraBoldItalic.woff") format("woff");
   font-weight: 800;
   font-style: normal; }
 
 @font-face {
   font-family: 'Alegreya Sans';
-  src: url("/fonts/subset-AlegreyaSans-Black.woff2") format("woff2"), url("/fonts/subset-AlegreyaSans-Black.woff") format("woff");
+  src: url("../fonts/subset-AlegreyaSans-Black.woff2") format("woff2"), url("../fonts/subset-AlegreyaSans-Black.woff") format("woff");
   font-weight: 900;
   font-style: normal; }
 
 @font-face {
   font-family: 'Alegreya Sans';
-  src: url("/fonts/subset-AlegreyaSans-Regular.woff2") format("woff2"), url("/fonts/subset-AlegreyaSans-Regular.woff") format("woff");
+  src: url("../fonts/subset-AlegreyaSans-Regular.woff2") format("woff2"), url("../fonts/subset-AlegreyaSans-Regular.woff") format("woff");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
   font-family: 'Alegreya Sans';
-  src: url("/fonts/subset-AlegreyaSans-ThinItalic.woff2") format("woff2"), url("/fonts/subset-AlegreyaSans-ThinItalic.woff") format("woff");
+  src: url("../fonts/subset-AlegreyaSans-ThinItalic.woff2") format("woff2"), url("../fonts/subset-AlegreyaSans-ThinItalic.woff") format("woff");
   font-weight: 100;
   font-style: italic; }
 
 @font-face {
   font-family: 'Alegreya Sans';
-  src: url("/fonts/subset-AlegreyaSans-LightItalic.woff2") format("woff2"), url("/fonts/subset-AlegreyaSans-LightItalic.woff") format("woff");
+  src: url("../fonts/subset-AlegreyaSans-LightItalic.woff2") format("woff2"), url("../fonts/subset-AlegreyaSans-LightItalic.woff") format("woff");
   font-weight: 300;
   font-style: italic; }
 
 @font-face {
   font-family: 'Alegreya Sans';
-  src: url("/fonts/subset-AlegreyaSans-Light.woff2") format("woff2"), url("/fonts/subset-AlegreyaSans-Light.woff") format("woff");
+  src: url("../fonts/subset-AlegreyaSans-Light.woff2") format("woff2"), url("../fonts/subset-AlegreyaSans-Light.woff") format("woff");
   font-weight: 300;
   font-style: normal; }
 
 @font-face {
   font-family: 'Alegreya Sans';
-  src: url("/fonts/subset-AlegreyaSans-BlackItalic.woff2") format("woff2"), url("/fonts/subset-AlegreyaSans-BlackItalic.woff") format("woff");
+  src: url("../fonts/subset-AlegreyaSans-BlackItalic.woff2") format("woff2"), url("../fonts/subset-AlegreyaSans-BlackItalic.woff") format("woff");
   font-weight: 900;
   font-style: italic; }
 
 @font-face {
   font-family: 'Alegreya Sans';
-  src: url("/fonts/subset-AlegreyaSans-MediumItalic.woff2") format("woff2"), url("/fonts/subset-AlegreyaSans-MediumItalic.woff") format("woff");
+  src: url("../fonts/subset-AlegreyaSans-MediumItalic.woff2") format("woff2"), url("../fonts/subset-AlegreyaSans-MediumItalic.woff") format("woff");
   font-weight: 500;
   font-style: italic; }
 
 @font-face {
   font-family: 'Alegreya Sans';
-  src: url("/fonts/subset-AlegreyaSans-Italic.woff2") format("woff2"), url("/fonts/subset-AlegreyaSans-Italic.woff") format("woff");
+  src: url("../fonts/subset-AlegreyaSans-Italic.woff2") format("woff2"), url("../fonts/subset-AlegreyaSans-Italic.woff") format("woff");
   font-weight: normal;
   font-style: italic; }
 
 @font-face {
   font-family: 'Alegreya Sans';
-  src: url("/fonts/subset-AlegreyaSans-Bold.woff2") format("woff2"), url("/fonts/subset-AlegreyaSans-Bold.woff") format("woff");
+  src: url("../fonts/subset-AlegreyaSans-Bold.woff2") format("woff2"), url("../fonts/subset-AlegreyaSans-Bold.woff") format("woff");
   font-weight: bold;
   font-style: normal; }
 
 @font-face {
   font-family: 'Alegreya Sans';
-  src: url("/fonts/subset-AlegreyaSans-ExtraBoldItalic.woff2") format("woff2"), url("/fonts/subset-AlegreyaSans-ExtraBoldItalic.woff") format("woff");
+  src: url("../fonts/subset-AlegreyaSans-ExtraBoldItalic.woff2") format("woff2"), url("../fonts/subset-AlegreyaSans-ExtraBoldItalic.woff") format("woff");
   font-weight: 800;
   font-style: italic; }
 
@@ -539,7 +539,7 @@ button {
 
 .welcome {
   color: #fff;
-  background-image: url(/img/welcome/welcome-bg.png); }
+  background-image: url(../img/welcome/welcome-bg.png); }
 
 .welcome__container {
   display: -webkit-box;
@@ -631,7 +631,7 @@ svg:hover {
   width: 80px;
   margin: 10% auto; }
   .plus__img:after {
-    content: url(/img/advantages/dot_after.png);
+    content: url(../img/advantages/dot_after.png);
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -666,7 +666,7 @@ svg:hover {
   -webkit-box-pack: start;
   -ms-flex-pack: start;
   justify-content: flex-start;
-  background-image: url(/img/reviews/bg-rev.png);
+  background-image: url(../img/reviews/bg-rev.png);
   background-repeat: no-repeat;
   background-size: auto 345px;
   background-position: center center;
