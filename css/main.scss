@@ -1,24 +1,7 @@
-//colors
-$white: #fff;
-$black: #0d0d0d;
-$green: #0f5a47;
-$grey: #f2f5f4;
-
-//normalize
 @import "layout/normalize.scss";
-
-//setup
 @import "layout/basis.scss";
 @import "layout/fonts.scss";
 
-//blocks
-@import "blocks/header.scss";
-@import "blocks/nav.scss";
-@import "blocks/contact.scss";
-@import "blocks/fixed-menu.scss";
+
 @import "blocks/welcome.scss";
-@import "blocks/order.scss";
-@import "blocks/desc.scss";
-@import "blocks/advantages.scss";
-@import "blocks/plus.scss";
-@import "blocks/reviews.scss";
+@import "blocks/nav.scss";
