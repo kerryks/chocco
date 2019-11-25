@@ -1,3 +1,4 @@
+
 .nav__list {
   display: flex;
   align-items: center;
@@ -7,27 +8,11 @@
   display: flex;
   align-items: center;
   margin-right: 15px;
-
-  &:after {
-    content: "";
-    width: 4px;
-    height: 4px;
-    background-color: $white;
-    border-radius: 50%;
-    display: block;
-    margin-left: 15px;
-  }
-
-  &:nth-last-child(2) {
-    &:after {
-      display: none;
-    }
-  }
 }
 
 .nav__link {
   text-decoration: none;
   color: $white;
-  font-size: 13px;
-  text-transform: uppercase;
+  text-transform: capitalize;
+  font-size: 18px;
 }
