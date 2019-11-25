@@ -489,11 +489,12 @@ button {
   align-items: center;
   margin-right: 15px; }
 
+.nav__link:first-letter {
+  text-transform: uppercase; }
+
 .nav__link {
   text-decoration: none;
-  color: #fff;
-  text-transform: capitalize;
-  font-size: 18px; }
+  color: #fff; }
 
 .contact {
   text-align: right;
