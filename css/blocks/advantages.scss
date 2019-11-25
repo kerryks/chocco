@@ -1,0 +1,17 @@
+.advantages__container {
+  display: flex;
+  flex-flow: column;
+}
+
+.advantages__title {
+  margin-bottom: 100px;
+  
+  h2 {
+    text-align: center;
+  }
+
+  p {
+  font-size: 18px;
+  font-weight: 400;
+  }
+}
