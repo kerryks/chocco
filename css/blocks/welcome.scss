@@ -1,9 +1,26 @@
 .welcome {
+  position: relative;
   color: $white;
   background-image: url(../img/welcome/bg-welcome.png);
   background-position: bottom right;
   background-repeat: no-repeat;
   background-color: $blue;
+
+  &::before {
+    content: url(../img/welcome/sheet.png);
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: -7%;
+  }
+
+  &::after {
+    content: url(../img/welcome/barries.png);
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: -4%;
+  }
 }
 
 .welcome__container {
