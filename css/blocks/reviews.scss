@@ -4,6 +4,7 @@
   align-items: center;
   text-align: center;
 }
+
 .reviews__head {
   margin-top: 110px;
   margin-bottom: 40px;
@@ -11,8 +12,9 @@
 
 .reviews__item {
   display: flex;
+  height: 340px;
   flex-direction: row;
-  justify-content: flex-start;
+  align-items: center;
   background-image: url(../img/reviews/bg-rev.png);
   background-repeat: no-repeat;
   background-size: auto 345px;
@@ -21,9 +23,39 @@
 
 }
 
+.reviews__pic {
+  margin-left: 5%;
+}
+
+.reviews__desc {
+  margin-left: 2%;
+  text-align: left;
+  width: 45%;
+}
+
+.reviews__text {
+
+  h4 {
+    font-size: 30px;
+    font-weight: 400;
+    margin-bottom: 2%;
+  }
+  
+  p,
+  .reviews__name {
+    color: $dark-grey;
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 3%;
+  }
+  
+  .reviews__name {
+    font-weight: 600;
+  }
+}
+
 .reviews__list {
   display: flex;
-  flex-direction: row;
   justify-content: center;
 }
 
