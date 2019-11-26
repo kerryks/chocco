@@ -28,18 +28,12 @@
 }
 
 .reviews__img {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  border-radius: 50%;
-  height: 100px;
-  width: 100px;
-  margin: 2% 2%;
+  margin: 1% 1%;
 }
 
 .reviews__img--list {
-
+  width: 70px;
+  height: 70px;
   border-radius: 50%;
-  width: 80px;
-  height: 80px;
+  object-fit: cover;
 }

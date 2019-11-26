@@ -1,8 +1,8 @@
 html,
 body {
   height: 100%;
-//  -webkit-font-smoothing: antialiased;
-//  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
@@ -23,7 +23,7 @@ body {
 }
 
 .container {
-  width: 940px;
+  max-width: 940px;
   margin: 0 auto;
 }
 
