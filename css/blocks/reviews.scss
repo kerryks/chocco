@@ -4,6 +4,10 @@
   align-items: center;
   text-align: center;
 }
+.reviews__head {
+  margin-top: 110px;
+  margin-bottom: 40px;
+}
 
 .reviews__item {
   display: flex;
@@ -14,10 +18,28 @@
   background-size: auto 345px;
   background-position: center center;
   position: relative;
+
 }
 
 .reviews__list {
   display: flex;
   flex-direction: row;
   justify-content: center;
+}
+
+.reviews__img {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+  margin: 2% 2%;
+}
+
+.reviews__img--list {
+
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
 }

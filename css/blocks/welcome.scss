@@ -1,6 +1,9 @@
 .welcome {
   color: $white;
-  background-image: url(../img/welcome/welcome-bg.png);
+  background-image: url(../img/welcome/bg-welcome.png);
+  background-position: bottom right;
+  background-repeat: no-repeat;
+  background-color: $blue;
 }
 
 .welcome__container {

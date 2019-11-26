@@ -1,8 +1,8 @@
 html,
 body {
   height: 100%;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+//  -webkit-font-smoothing: antialiased;
+//  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
@@ -10,6 +10,7 @@ body {
   color: $black;
   position: relative;
   font-family: 'Alegreya Sans';
+  font-weight: 400;
   text-decoration: none;
 }
 
