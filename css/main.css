@@ -493,7 +493,7 @@ button {
     left: 0;
     bottom: -7%; }
   .welcome::after {
-    content: url(../img/welcome/barries.png);
+    content: url(../img/welcome/berries.png);
     display: block;
     position: absolute;
     right: 0;
@@ -584,6 +584,15 @@ button {
 .desc__pic--roulette {
   -webkit-mask-image: url(/img/welcome/icon/roulette.svg);
   mask-image: url(/img/welcome/icon/roulette.svg); }
+
+.advantages {
+  position: relative; }
+  .advantages::before {
+    content: url(../img/advantages/sheet.png);
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 7%; }
 
 .advantages__container {
   display: -webkit-box;
