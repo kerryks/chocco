@@ -26,6 +26,12 @@
 .welcome__container {
   display: flex;
   justify-content: flex-start;
+  flex-flow: column;
+}
+
+.welcome__intro {
+  display: flex;
   align-items: center;
-  flex-flow: wrap;
+  flex: 1;
+  width: 100%;
 }

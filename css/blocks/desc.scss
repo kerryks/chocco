@@ -1,3 +1,7 @@
+.desc {
+  margin-bottom: 5%;
+}
+
 .desc__list {
   display: flex;
 }
@@ -14,25 +18,11 @@
 }
 
 .desc__pic {
-  color: $white;
-  flex-shrink: 0;
   width: 44px;
   height: 44px;
-  margin-right: 10px;
-  background-color: $white;
-  position: relative;
-  mask-repeat: no-repeat;
+  flex-shrink: 0;
+  fill: none;
+  stroke: $white;
+  stroke-width: 0.5;
+  stroke-miterlimit: 10;
 }
-
-.desc__pic--sheet {
-  mask-image: url(/img/welcome/icon/sheet-icon.svg);
-
-}
-.desc__pic--car {
-  mask-image: url(/img/welcome/icon/car.svg);
-}
-
-.desc__pic--roulette {
-  mask-image: url(/img/welcome/icon/roulette.svg);
-}
-

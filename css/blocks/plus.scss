@@ -24,8 +24,7 @@
   margin-right: 60px;
 }
 
-.plus__item:last-child
-.plus__img:after {
+.plus__item:last-child .plus__img:after {
   display: none;
 }
 
@@ -37,14 +36,11 @@
 
 .plus__head {
   width: 250px;
-
-  h4 {
-    font-weight: 600;
-    font-size: 27px;
-    margin-bottom: 30px;
-  }
-
+  font-weight: 600;
+  font-size: 27px;
+  margin-bottom: 30px;
 }
+
 .plus__text {
   font-weight: 300;
   color: $dark-grey;
