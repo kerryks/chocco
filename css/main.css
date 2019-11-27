@@ -442,8 +442,6 @@ img {
   border: 1px solid transparent;
   margin-bottom: 3px;
   position: relative; }
-  .fixed-menu__dot--active {
-    border-color: #fff; }
   .fixed-menu__dot:before {
     content: '';
     width: 6px;
@@ -548,7 +546,8 @@ img {
   fill: none;
   stroke: #fff;
   stroke-width: 0.5;
-  stroke-miterlimit: 10; }
+  stroke-miterlimit: 10;
+  margin-right: 12px; }
 
 .advantages {
   position: relative; }
