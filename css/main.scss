@@ -2,7 +2,9 @@
 $white: #fff;
 $black: #0d0d0d;
 $green: #0f5a47;
-$grey: #f2f5f4;
+$grey: #f8faf9;
+$blue: #61c4d9;
+$dark-grey: #666666;
 
 //normalize
 @import "layout/normalize.scss";
@@ -18,6 +20,7 @@ $grey: #f2f5f4;
 @import "blocks/fixed-menu.scss";
 @import "blocks/welcome.scss";
 @import "blocks/order.scss";
+@import "blocks/bar-img";
 @import "blocks/desc.scss";
 @import "blocks/advantages.scss";
 @import "blocks/plus.scss";

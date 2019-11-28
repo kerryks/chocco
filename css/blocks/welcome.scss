@@ -1,10 +1,37 @@
 .welcome {
+  position: relative;
   color: $white;
-  background-image: url(/img/welcome/welcome-bg.png);
+  background-image: url(../img/welcome/bg-welcome.png);
+  background-position: bottom right;
+  background-repeat: no-repeat;
+  background-color: $blue;
+
+  &::before {
+    content: url(../img/welcome/sheet.png);
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: -7%;
+  }
+
+  &::after {
+    content: url(../img/welcome/berries.png);
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: -4%;
+  }
 }
 
 .welcome__container {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
+  flex-flow: column;
+}
+
+.welcome__intro {
+  display: flex;
   align-items: center;
+  flex: 1;
+  width: 100%;
 }

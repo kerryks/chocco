@@ -1,15 +1,29 @@
-
+.desc {
+  margin-bottom: 5%;
+}
 
 .desc__list {
   display: flex;
-  align-items: center;
+}
+
+.desc__item {
+  display: flex;
+  width: 140px;
+  margin-right: 30px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
 }
 
 .desc__pic {
   width: 44px;
   height: 44px;
-}
-
-svg:hover {
-  fill: $white;
+  flex-shrink: 0;
+  fill: none;
+  stroke: $white;
+  stroke-width: 0.5;
+  stroke-miterlimit: 10;
+  margin-right: 12px;
 }

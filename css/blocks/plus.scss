@@ -14,20 +14,34 @@
   margin: 10% auto;
 
   &:after {
-    content: url(/img/advantages/dot_after.png);
+    content: url(../img/advantages/dot_after.png);
     display: flex;
     margin-left: 110%;
   }
+}
 
-  &:nth-last-child(1) {
-    &:after {
-      display: none;
-    }
-  }
+.plus__item {
+  margin-right: 60px;
+}
+
+.plus__item:last-child .plus__img:after {
+  display: none;
 }
 
 .plus__icon {
   // height: 50px;
   margin-left: 19%;
   width: 50px;
+}
+
+.plus__head {
+  width: 250px;
+  font-weight: 600;
+  font-size: 27px;
+  margin-bottom: 30px;
+}
+
+.plus__text {
+  font-weight: 300;
+  color: $dark-grey;
 }

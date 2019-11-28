@@ -14,10 +14,6 @@
   margin-bottom: 3px;
   position: relative;
 
-  &--active {
-    border-color: $white;
-  }
-
   &:before {
     content: '';
     width: 6px;

@@ -1,17 +1,36 @@
+.advantages {
+  position: relative;
+
+  &::before {
+    content: url(../img/advantages/sheet.png);
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 7%;
+  }
+}
+
 .advantages__container {
   display: flex;
   flex-flow: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .advantages__title {
+  max-width: 410px;
   margin-bottom: 100px;
-  
-  h2 {
-    text-align: center;
-  }
+}
 
-  p {
+.advantages__head {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.advantages__desc {
+  text-align: center;
   font-size: 18px;
   font-weight: 400;
-  }
+  color: $dark-grey;
+  font-weight: 400;
 }
