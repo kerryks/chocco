@@ -9,7 +9,10 @@ $dark-grey: #666666;
 //normalize
 @import "layout/normalize.scss";
 
-//setup
+// mixins
+@import "layout/mixins.scss";
+
+//setups
 @import "layout/basis.scss";
 @import "layout/fonts.scss";
 

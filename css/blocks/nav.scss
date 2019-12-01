@@ -1,3 +1,8 @@
+.nav {
+  @include tablets {
+    display: none;
+  }
+}
 .nav__list {
   display: flex;
   align-items: center;
@@ -6,7 +11,7 @@
 .nav__item {
   display: flex;
   align-items: center;
-  margin-right: 15px;
+  margin-right: rem(15px);
 }
 
 .nav__link:first-letter {

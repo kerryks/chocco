@@ -9,8 +9,8 @@
   align-items: center;
   background: $grey;
   border-radius: 50%;
-  height: 80px;
-  width: 80px;
+  height: rem(80px);
+  width: rem(80px);
   margin: 10% auto;
 
   &:after {
@@ -21,7 +21,7 @@
 }
 
 .plus__item {
-  margin-right: 60px;
+  margin-right: rem(60px);
 }
 
 .plus__item:last-child .plus__img:after {
@@ -29,16 +29,16 @@
 }
 
 .plus__icon {
-  // height: 50px;
+  // height: rem(50px);
   margin-left: 19%;
-  width: 50px;
+  width: rem(50px);
 }
 
 .plus__head {
-  width: 250px;
+  width: rem(250px);
   font-weight: 600;
-  font-size: 27px;
-  margin-bottom: 30px;
+  font-size: rem(27px);
+  margin-bottom: rem(30px);
 }
 
 .plus__text {
