@@ -676,7 +676,7 @@ img {
 
 .team__title {
   max-width: 25.625rem;
-  margin-bottom: 6.25rem; }
+  margin-bottom: 3.75rem; }
 
 .team-acco {
   display: flex;
@@ -739,11 +739,18 @@ img {
   background-size: cover;
   background-position: center;
   position: relative;
-  display: flex; }
+  display: flex;
+  color: #fff; }
+  .menu::before {
+    content: url(../img/menu/berry.png);
+    display: block;
+    position: absolute;
+    left: 2%;
+    top: -11%; }
 
 .menu__title {
   position: absolute;
-  top: 6%;
+  top: 15%;
   left: 5%; }
 
 .menu-acco {
@@ -754,11 +761,13 @@ img {
 .menu-acco__item {
   display: flex;
   overflow: hidden;
-  width: 0;
   visibility: visible; }
 
-.menu-acco__item.active .menu-acco__content {
-  width: 530px; }
+.menu-acco__item--active .menu-acco__content {
+  width: 33.125rem;
+  padding: 3.125rem 7.8rem 0 1.687rem;
+  background-color: #2f3234;
+  opacity: 0.8; }
 
 .menu-acco__trigger {
   width: 100px;
@@ -773,7 +782,15 @@ img {
 .menu-acco__head {
   writing-mode: vertical-rl;
   transform: rotate(180deg);
-  margin-bottom: 46px; }
+  margin-bottom: 2.875rem;
+  color: #fff;
+  font-size: 3rem; }
+
+.menu-acco__content {
+  display: flex;
+  width: 0;
+  font-weight: 400;
+  line-height: 23.97px; }
 
 .reviews__container {
   display: flex;
