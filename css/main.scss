@@ -5,6 +5,13 @@ $green: #0f5a47;
 $grey: #f8faf9;
 $blue: #61c4d9;
 $dark-grey: #666666;
+$chocco: #323232;
+
+//displays
+
+$tablets: 768px;
+$phones: 480px;
+$phones-small: 350px;
 
 //normalize
 @import "layout/normalize.scss";
@@ -22,9 +29,15 @@ $dark-grey: #666666;
 @import "blocks/contact.scss";
 @import "blocks/fixed-menu.scss";
 @import "blocks/welcome.scss";
+@import "blocks/intro.scss";
 @import "blocks/order.scss";
 @import "blocks/bar-img";
 @import "blocks/desc.scss";
 @import "blocks/advantages.scss";
 @import "blocks/plus.scss";
+@import "blocks/team.scss";
+@import "blocks/menu.scss";
 @import "blocks/reviews.scss";
+@import "blocks/map.scss";
+@import "blocks/footer.scss";
+@import "blocks/socials.scss";

@@ -3,35 +3,39 @@
   text-align: center;
 }
 
-.plus__img {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  background: $grey;
-  border-radius: 50%;
-  height: rem(80px);
-  width: rem(80px);
-  margin: 10% auto;
-
-  &:after {
-    content: url(../img/advantages/dot_after.png);
-    display: flex;
-    margin-left: 110%;
-  }
-}
-
 .plus__item {
   margin-right: rem(60px);
+  z-index: 2;
+  position: relative;
 }
 
 .plus__item:last-child .plus__img:after {
   display: none;
 }
 
+.plus__img {
+  display: inline-block;
+  background: $grey;
+  border-radius: 50%;
+  margin: 10% auto;
+  padding: 20px;
+
+  &:after {
+    content: url(../img/advantages/dot_after.png);
+    display: flex;
+    left: 100%;
+    position: absolute;
+  }
+}
+
 .plus__icon {
-  // height: rem(50px);
-  margin-left: 19%;
+  flex-shrink: 0;
+  height: rem(50px);
   width: rem(50px);
+  fill:none;
+  stroke: $black;
+  stroke-width:0.75;
+  stroke-miterlimit:10;
 }
 
 .plus__head {

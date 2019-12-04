@@ -1,0 +1,49 @@
+.menu {
+  background-image: url(../img/menu/bg-menu.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+}
+
+.menu__title {
+  position: absolute;
+  top: 6%;
+  left: 5%;
+}
+
+.menu-acco {
+  display: flex;
+  justify-content: flex-end;
+  height: 100%;
+}
+
+
+.menu-acco__item {
+  display: flex;
+  overflow: hidden;
+  width: 0;
+  visibility: visible;
+}
+
+.menu-acco__item.active .menu-acco__content {
+  width: 530px;
+}
+
+.menu-acco__trigger {
+  width: 100px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  text-decoration: none;
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.menu-acco__head {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  margin-bottom: 46px;
+}

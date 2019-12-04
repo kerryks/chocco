@@ -1,0 +1,32 @@
+.footer__container {
+  height: rem(94px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer__left {
+  display: flex;
+  flex-flow: column;
+  height: 45px;
+}
+
+.footer__address {
+  font-weight: 400;
+}
+
+.footer-contacts__phone {
+  color: $green;
+  font-size: rem(21px);
+  font-weight: 400;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-style: normal;
+
+  &:before {
+    content: url(../img/welcome/icon/phone.png);
+    fill: $green;
+  }
+}
+
+

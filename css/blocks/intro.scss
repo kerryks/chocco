@@ -1,0 +1,41 @@
+.intro {
+  width: 50%;
+}
+
+.intro__head {
+  display: flex;
+  flex-flow: column;
+  margin-bottom: rem(30px);
+}
+
+.intro__desc {
+  font-size: rem(60px);
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.intro__text {
+  width: 75%;
+  font-size: rem(21px);
+  font-weight: 400;
+}
+
+.intro__btn {
+  display: inline-block;
+  position: relative;
+  padding: rem(20px) rem(35px);
+  border-radius: rem(45px);
+  background-color: $white;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: $green;
+  font-size: rem(19px);
+  font-weight: 600;
+  outline: none;
+}
+
+.intro__btn:hover,
+.intro__btn:active,
+.intro__btn:focus {
+  background-color: $dark-grey;
+}

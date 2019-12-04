@@ -1,0 +1,10 @@
+.socials {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.socials__icon {
+  fill: $dark-grey;
+  width: 23px;
+  height: 13px;
+}

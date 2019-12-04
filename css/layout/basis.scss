@@ -2,19 +2,24 @@ html {
   font-size: 16px;
 
   @include tablets {
-    font-size: rem(15px);
+    font-size: 15px;
   }
 
   @include phones {
-    font-size: rem(14px);
+    font-size: 14px;
+  }
+
+  @include phones {
+    font-size: 13px;
   }
 }
 
 html,
 body {
-  height: 100%;
+  width: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: $dark-grey;
 }
 
 body {
@@ -23,6 +28,7 @@ body {
   position: relative;
   font-family: 'Alegreya Sans';
   font-weight: 400;
+  font-style: normal;
   text-decoration: none;
 }
 
