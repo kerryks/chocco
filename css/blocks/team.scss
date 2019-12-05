@@ -41,7 +41,7 @@
   display: flex;
   flex-flow: column;
   align-items: center;
-  margin-right: 20px;
+  margin-right: rem(20px);
 }
 
 .team-acco__man--active .team-acco__content {
@@ -49,9 +49,9 @@
 }
 
 .team-acco__img {
-  margin-bottom: 25px;
-  width: 220px;
-  height: 288pßx;
+  margin-bottom: rem(25px);
+  width: rem(220px);
+  height: rem(288px);
 }
 
 .team-acco__photo {
@@ -67,7 +67,7 @@
 
   &::after {
     content: "";
-    border-width: 10px;
+    border-width: rem(10px);
     display: inline-block;
     border-style: solid;
     border-color: $chocco;
@@ -75,8 +75,8 @@
     border-left-color: transparent;
     border-right-color: transparent;
     vertical-align: middle;
-    margin-left: 10px;
-    margin-bottom: -10px;
+    margin-left: rem(10px);
+    margin-bottom: rem(-10px);
   }
 }
 
@@ -87,7 +87,7 @@
 }
 
 .team-acco__position {
-  margin-bottom: 6px;
+  margin-bottom: rem(6px);
   font-weight: 400;
 }
 

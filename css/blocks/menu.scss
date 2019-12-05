@@ -44,7 +44,7 @@
 }
 
 .menu-acco__trigger {
-  width: 100px;
+  width: rem(100px);
   display: flex;
   align-items: flex-end;
   justify-content: center;
@@ -67,5 +67,4 @@
   display: flex;
   width: 0;
   font-weight: 400;
-  line-height: 23.97px;
 }

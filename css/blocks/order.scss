@@ -1,7 +1,36 @@
 .order {
+  display: flex;
+  align-items: center;
+  position: relative;
   background-image: url(../img/order/bg-order.png);
   background-repeat: no-repeat;
   background-size: cover;
+  color: $green;
+
+  &::before {
+    content: url(../img/order/berry.png);
+    display: block;
+    position: absolute;
+    left: 1.25rem;
+    bottom: 15%;
+  }
+
+  &::after {
+    content: url(../img/order/sheet.png);
+    display: block;
+    position: absolute;
+    right: 0%;
+    bottom: 10%;
+  }
+}
+.order__container {
+  display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+  max-width: 58.75rem;
+}
+
+.order__title {
+  margin-bottom: 3.437rem;
 }

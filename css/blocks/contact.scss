@@ -1,6 +1,10 @@
 .contact {
   text-align: right;
   font-style: normal;
+  
+  @include tablets {
+    display: none;
+  }
 }
 
 .contact__phone {

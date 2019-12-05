@@ -7,12 +7,13 @@ $blue: #61c4d9;
 $dark-grey: #666666;
 $chocco: #323232;
 $bg-menu: #2f3234;
+$yellow: #dde3bd;
 
 //displays
 
 $tablets: 768px;
 $phones: 480px;
-$phones-small: 350px;
+$phones-small: 330px;
 
 //normalize
 @import "layout/normalize.scss";
@@ -39,6 +40,8 @@ $phones-small: 350px;
 @import "blocks/team.scss";
 @import "blocks/menu.scss";
 @import "blocks/reviews.scss";
+@import "blocks/form.scss";
+@import "blocks/btn.scss";
 @import "blocks/map.scss";
 @import "blocks/footer.scss";
 @import "blocks/socials.scss";

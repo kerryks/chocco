@@ -6,11 +6,11 @@ html {
   }
 
   @include phones {
-    font-size: 14px;
+    font-size: 13px;
   }
 
-  @include phones {
-    font-size: 13px;
+  @include phones-small {
+    font-size: 12px;
   }
 }
 

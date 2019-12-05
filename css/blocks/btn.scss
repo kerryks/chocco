@@ -1,0 +1,32 @@
+.btn--sub {
+  position: relative;
+  padding: rem(20px) rem(35px);
+  border-radius: rem(45px);
+  background-color: $green;
+  text-transform: uppercase;
+  color: $white;
+  font-size: rem(19px);
+  font-weight: 600;
+  outline: none;
+} 
+
+.btn--sub:hover,
+.btn--sub:active,
+.btn--sub:focus {
+  background-color: $white;
+  color: $green;
+}
+
+.btn--res {
+  position: relative;
+  padding: rem(20px) rem(35px);
+  border-radius: rem(45px);
+  border: 0.188rem solid transparent;
+}
+
+.btn--res:hover,
+.btn--res:active,
+.btn--res:focus {
+  background-color: transparent;
+  border-color: $yellow;
+}

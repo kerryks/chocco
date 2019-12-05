@@ -1,5 +1,9 @@
 .desc {
   margin-bottom: 5%;
+
+  @include tablets {
+    margin-top: 1rem;
+  }
 }
 
 .desc__list {
@@ -14,6 +18,9 @@
   &:last-child {
     margin-right: 0;
   }
+ @include phones {
+   margin-right: 0.1rem;
+ }
 
 }
 

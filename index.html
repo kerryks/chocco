@@ -97,7 +97,7 @@
         <ul class="plus">
           <li class="plus__item">
             <div class="plus__img">
-              <svg class="plus__icon" style="fill: #000000">
+              <svg class="plus__icon">
                 <use xlink:href="./img/sprite/sprite.svg#man"></use>
               </svg>
             </div>
@@ -265,75 +265,88 @@
       <div class="order__container">
         <h2 class="order__title">Закажите доставку</h2>
         <form class="form" action="">
-          <div class="form__col">
-            <div class="form__row">
-              <label for="" class="form__label">
-                <div class="form__two">Имя
-                  <input type="text">
-                </div>
-                <div class="form__two">Телефон
-                  <input type="text">
-                </div>
-              </label>
-              <label for="" class="form__label"></label>
+          <div class="form__container">
+            <div class="form__col">
+              <div class="form__row">
+                <label class="form__label">
+                  <div class="form__title">Имя
+                    <input class="form__input" type="text">
+                  </div>
+                </label>
+                <label class="form__label">
+                  <div class="form__title">Телефон
+                    <input class="form__input" type="text">
+                  </div>
+                </label>
+              </div>
+              <div class="form__row">
+                <label class="form__label">
+                  <div class="form__title">Улица
+                    <input class="form__input" type="text">
+                  </div>
+                </label>
+              </div>
+              <div class="form__row">
+                <label class="form__label">
+                  <div class="form__title">Дом
+                    <input class="form__input" type="text">
+                  </div>
+                </label>
+                <label class="form__label">
+                  <div class="form__title">Корпус
+                    <input class="form__input" type="text">
+                  </div>
+                </label>
+                <label class="form__label">
+                  <div class="form__title">Квартира
+                    <input class="form__input" type="text">
+                  </div>
+                </label>
+                <label class="form__label">
+                  <div class="form__title">Этаж
+                    <input class="form__input" type="text">
+                  </div>
+                </label>
+              </div>
             </div>
-            <div class="form__row">
-              <label for="" class="form__label--street">
-                <div class="form__one--small">Улица
-                  <input type="text">
+            <div class="form__col">
+              <div class="form__row">
+                <label class="form__label">
+                  <div class="form__title">Комментарий
+                    <input class="form__input form__input--big" type="text">
+                  </div>
+                </label>
+              </div>
+              <div class="form__row">
+                <div class="form__payment">
+                  <label class="form__view">
+                    <input type="radio" class="form__radio-input" name="view">
+                    <span class="form__radio-fake"></span>
+                    <span class="form__radio-text">Потребуется сдача</span>
+                  </label>
+                  <label class="form__view">
+                    <input type="radio" class="form__radio-input" name="view" checked>
+                    <span class="form__radio-fake"></span>
+                    <span class="form__radio-text">Оплата по карте</span>
+                  </label>
                 </div>
-              </label>
+              </div>
+              <div class="form__row">
+                <label class="form__checkbox">
+                  <input type="checkbox" class="form__checkbox-input" checked>
+                  <span class="form__checkbox-fake"></span>
+                  <span class="form__checkbox-text">Не перезванивать</span>
+                </label>
+              </div>
+              <div class="form__btn">
+                <button class="btn btn--sub" type="submit">Заказать</button>
+                <button class="btn btn--res" type="reset">Очистить</button>
+              </div>
             </div>
-            <div class="form__row">
-              <label for="" class="form__label">
-                <div class="form__four">Дом
-                  <input type="text">
-                </div>
-              </label>
-              <label for="" class="form__label">
-                <div class="form__four">Корпус
-                  <input type="text">
-                </div>
-              </label>
-              <label for="" class="form__label">
-                <div class="form__four">Квартира
-                  <input type="text">
-                </div>
-              </label>
-              <label for="" class="form__label">
-                <div class="form__four">Этаж
-                  <input type="text">
-                </div>
-              </label>
-            </div>
-          </div>
-          <div class="form__col">
-            <div class="form__row">
-              <label for="" class="form__label">
-                <div class="form__one--medium">Комментарий
-                  <input type="text">
-                </div>
-              </label>
-            </div>
-            <div class="form__row">
-              <ul class="form__payment">
-                <li class="view">
-                  <input type="radio">
-                </li>
-                <li class="view">
-                  <input type="radio">
-                </li>
-              </ul>
-            </div>
-            <div class="form__row">
-              <input type="checkbox" class="call-back">
-            </div>
-            <div class="form__row">
-              <button class="btn" type="submit">Заказать</button>
-              <button class="btn" type="reset">Очистить</button>
-            </div>
+
           </div>
         </form>
+
       </div>
     </section>
 
