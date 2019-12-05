@@ -1,17 +1,36 @@
+.advantages {
+  position: relative;
+
+  &::before {
+    content: url(../img/advantages/sheet.png);
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 7%;
+  }
+}
+
 .advantages__container {
   display: flex;
   flex-flow: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .advantages__title {
-  margin-bottom: 100px;
-  
-  h2 {
-    text-align: center;
-  }
+  max-width: rem(410px);
+  margin-bottom: rem(100px);
+}
 
-  p {
-  font-size: 18px;
+.advantages__head {
+  text-align: center;
+  margin-bottom: rem(20px);
+}
+
+.advantages__desc {
+  text-align: center;
+  font-size: rem(18px);
   font-weight: 400;
-  }
+  color: $dark-grey;
+  font-weight: 400;
 }

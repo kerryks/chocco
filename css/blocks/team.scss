@@ -1,0 +1,97 @@
+.team {
+  position: relative;
+
+  &::before {
+    content: url(../img/team/bg/bg-team-sheet.png);
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: 50%;
+  }
+
+  &::after {
+    content: url(../img/team/bg/berries-team.png);
+    display: block;
+    position: absolute;
+    right: 0%;
+    bottom: 90%;
+  }
+}
+
+.team__container {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.team__title {
+  max-width: rem(410px);
+  margin-bottom: rem(60px);
+}
+
+.team-acco {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  z-index: 2;
+}
+
+.team-acco__man {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  margin-right: rem(20px);
+}
+
+.team-acco__man--active .team-acco__content {
+  display: flex;
+}
+
+.team-acco__img {
+  margin-bottom: rem(25px);
+  width: rem(220px);
+  height: rem(288px);
+}
+
+.team-acco__photo {
+  width: 100%;
+  height: 100%;
+}
+
+.team-acco__name {
+  font-size: rem(21px);
+  font-weight: 600;
+  color: $chocco;
+  text-decoration: none;
+
+  &::after {
+    content: "";
+    border-width: rem(10px);
+    display: inline-block;
+    border-style: solid;
+    border-color: $chocco;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    vertical-align: middle;
+    margin-left: rem(10px);
+    margin-bottom: rem(-10px);
+  }
+}
+
+.team-acco__content {
+  display: none;
+  flex-flow: column;
+  align-items: center;
+}
+
+.team-acco__position {
+  margin-bottom: rem(6px);
+  font-weight: 400;
+}
+
+.team-acco__desc {
+  text-align: center;
+  font-weight: 300;
+}

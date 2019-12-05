@@ -3,31 +3,49 @@
   text-align: center;
 }
 
+.plus__item {
+  margin-right: rem(60px);
+  z-index: 2;
+  position: relative;
+}
+
+.plus__item:last-child .plus__img:after {
+  display: none;
+}
+
 .plus__img {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
+  display: inline-block;
   background: $grey;
   border-radius: 50%;
-  height: 80px;
-  width: 80px;
   margin: 10% auto;
+  padding: rem(20px);
 
   &:after {
-    content: url(/img/advantages/dot_after.png);
+    content: url(../img/advantages/dot_after.png);
     display: flex;
-    margin-left: 110%;
-  }
-
-  &:nth-last-child(1) {
-    &:after {
-      display: none;
-    }
+    left: 100%;
+    position: absolute;
   }
 }
 
 .plus__icon {
-  // height: 50px;
-  margin-left: 19%;
-  width: 50px;
+  flex-shrink: 0;
+  height: rem(50px);
+  width: rem(50px);
+  fill:none;
+  stroke: $black;
+  stroke-width:0.75;
+  stroke-miterlimit:10;
+}
+
+.plus__head {
+  width: rem(250px);
+  font-weight: 600;
+  font-size: rem(27px);
+  margin-bottom: rem(30px);
+}
+
+.plus__text {
+  font-weight: 300;
+  color: $dark-grey;
 }

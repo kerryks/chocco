@@ -1,23 +1,110 @@
+.reviews__container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+}
+
 .reviews {
   display: flex;
   justify-content: flex-start;
   align-items: center;
   text-align: center;
+  position: relative;
+
+  &::before {
+    content: url(../img/reviews/berries.png);
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: -16%;
+  }
+
+  &::after {
+    content: url(../img/reviews/berri-two.png);
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 2%;
+  }
+}
+
+.reviews__head {
+  margin-bottom: rem(40px);
 }
 
 .reviews__item {
   display: flex;
+  min-height: rem(340px);
   flex-direction: row;
-  justify-content: flex-start;
-  background-image: url(/img/reviews/bg-rev.png);
+  align-items: center;
+  background-image: url(../img/reviews/reviews-img.png);
   background-repeat: no-repeat;
-  background-size: auto 345px;
-  background-position: center center;
+  background-color: $grey;
+  background-position: top right;
   position: relative;
+  margin-bottom: rem(20px);
+}
+
+.reviews__item::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 45%;
+  bottom: 93%;
+  width: rem(80px);
+  height: rem(25px);
+  border-radius: 0 0 50% 50% / 0 0 100% 100%;
+  background: $white;
+}
+
+.reviews__desc {
+  margin-left: rem(20px);
+  text-align: left;
+  width: rem(460px);
+}
+
+.reviews__title {
+  font-size: rem(30px);
+  font-weight: 400;
+  margin-bottom: rem(30px);
+}
+
+.reviews__text {
+  margin-bottom: rem(30px);
+}
+
+.reviews__text,
+.reviews__name {
+  color: $dark-grey;
+  font-size: rem(18px);
+  font-weight: 400;
+  margin-bottom: 3%;
+}
+
+.reviews__name {
+  font-weight: 600;
 }
 
 .reviews__list {
   display: flex;
-  flex-direction: row;
   justify-content: center;
+}
+
+.reviews__img {
+  margin-right: rem(13px);
+}
+
+.reviews__img_active {
+  //border: rem(6px) solid $green;
+  border-radius: 50%;
+  box-shadow: 0 0 0 rem(6px) $green;
+}
+
+.reviews__img--list {
+  width: rem(70px);
+  height: rem(70px);
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
 }

@@ -1,0 +1,70 @@
+.menu {
+  background-image: url(../img/menu/bg-menu.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  color: $white;
+
+  &::before {
+    content: url(../img/menu/berry.png);
+    display: block;
+    position: absolute;
+    left: 2%;
+    top: -11%;
+  }
+}
+
+.menu__title {
+
+  position: absolute;
+  top: 15%;
+  left: 5%;
+}
+
+.menu-acco {
+  display: flex;
+  justify-content: flex-end;
+  height: 100%;
+}
+
+
+.menu-acco__item {
+  display: flex;
+  overflow: hidden;
+  visibility: visible;
+}
+
+.menu-acco__item--active .menu-acco__content {
+  width: 33.125rem;
+  padding: 3.125rem 7.8rem 0 1.687rem;
+  background-color: $bg-menu;
+  opacity: 0.8;
+}
+
+.menu-acco__trigger {
+  width: rem(100px);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  text-decoration: none;
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.menu-acco__head {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  margin-bottom: 2.875rem;
+  color: $white;
+  font-size: 3rem;
+}
+
+
+.menu-acco__content {
+  display: flex;
+  width: 0;
+  font-weight: 400;
+}
