@@ -912,8 +912,7 @@ img {
 .reviews__container {
   display: flex;
   justify-content: center;
-  flex-direction: column;
-  height: 100%; }
+  flex-direction: column; }
 
 .reviews {
   display: flex;
@@ -922,20 +921,46 @@ img {
   text-align: center;
   position: relative; }
   .reviews::before {
-    content: url(../img/reviews/berries.png);
-    display: block;
+    content: "";
+    overflow: hidden;
+    width: 8.6rem;
+    height: 20rem;
+    background: url(../img/reviews/berries.png) no-repeat;
+    background-size: contain;
     position: absolute;
     left: 0;
-    bottom: -16%; }
+    bottom: -10%; }
+    @media screen and (max-width: 480px) {
+      .reviews::before {
+        width: 5.937rem;
+        height: 19.812rem;
+        bottom: -21%; } }
+    @media screen and (max-width: 330px) {
+      .reviews::before {
+        width: 4.9rem;
+        height: 16rem; } }
   .reviews::after {
-    content: url(../img/reviews/berri-two.png);
-    display: block;
+    content: "";
+    overflow: hidden;
+    width: 9.375rem;
+    height: 5.375rem;
+    background: url(../img/reviews/berri-two.png) no-repeat;
+    background-size: contain;
     position: absolute;
     right: 0;
     top: 2%; }
+    @media screen and (max-width: 480px) {
+      .reviews::after {
+        width: 7.062rem;
+        height: 4.937rem; } }
 
 .reviews__head {
   margin-bottom: 2.5rem; }
+
+@media screen and (max-width: 768px) {
+  .reviews__main {
+    display: flex;
+    justify-content: center; } }
 
 .reviews__item {
   display: flex;
@@ -948,6 +973,19 @@ img {
   background-position: top right;
   position: relative;
   margin-bottom: 1.25rem; }
+  @media screen and (max-width: 768px) {
+    .reviews__item {
+      display: flex;
+      justify-content: center;
+      flex-flow: column;
+      width: 30.666rem;
+      height: 35rem; } }
+  @media screen and (max-width: 480px) {
+    .reviews__item {
+      width: 25.666rem; } }
+  @media screen and (max-width: 330px) {
+    .reviews__item {
+      margin: 0; } }
 
 .reviews__item::before {
   content: "";
@@ -959,11 +997,27 @@ img {
   height: 1.5625rem;
   border-radius: 0 0 50% 50% / 0 0 100% 100%;
   background: #fff; }
+  @media screen and (max-width: 768px) {
+    .reviews__item::before {
+      bottom: 96%; } }
+
+@media screen and (max-width: 768px) {
+  .reviews__pic {
+    width: 13.6rem;
+    height: 13.6rem;
+    margin-bottom: 2rem; } }
 
 .reviews__desc {
   margin-left: 1.25rem;
   text-align: left;
   width: 28.75rem; }
+  @media screen and (max-width: 768px) {
+    .reviews__desc {
+      text-align: center;
+      margin: 0; } }
+  @media screen and (max-width: 480px) {
+    .reviews__desc {
+      width: 25.062rem; } }
 
 .reviews__title {
   font-size: 1.875rem;
@@ -986,6 +1040,10 @@ img {
 .reviews__list {
   display: flex;
   justify-content: center; }
+  @media screen and (max-width: 768px) {
+    .reviews__list {
+      margin-top: 1rem;
+      z-index: 2; } }
 
 .reviews__img {
   margin-right: 0.8125rem; }

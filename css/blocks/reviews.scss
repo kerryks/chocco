@@ -2,7 +2,9 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
-  height: 100%;
+
+  @include tablets {}
+
 }
 
 .reviews {
@@ -13,24 +15,53 @@
   position: relative;
 
   &::before {
-    content: url(../img/reviews/berries.png);
-    display: block;
+    content: "";
+    overflow: hidden;
+    width: 8.6rem;
+    height: 20rem;
+    background: url(../img/reviews/berries.png) no-repeat;
+    background-size: contain;
     position: absolute;
     left: 0;
-    bottom: -16%;
+    bottom: -10%;
+
+    @include phones {
+      width: 5.937rem;
+      height: 19.812rem;
+      bottom: -21%;
+    }
+    @include phones-small {
+      width: 4.9rem;
+      height: 16rem;
+    }
   }
 
   &::after {
-    content: url(../img/reviews/berri-two.png);
-    display: block;
+    content: "";
+    overflow: hidden;
+    width: 9.375rem;
+    height: 5.375rem;
+    background: url(../img/reviews/berri-two.png) no-repeat;
+    background-size: contain;
     position: absolute;
     right: 0;
     top: 2%;
+    @include phones {
+      width: 7.062rem;
+      height: 4.937rem;
+    }
   }
 }
 
 .reviews__head {
   margin-bottom: rem(40px);
+}
+
+.reviews__main {
+  @include tablets {
+    display: flex;
+    justify-content: center;
+  }
 }
 
 .reviews__item {
@@ -44,6 +75,22 @@
   background-position: top right;
   position: relative;
   margin-bottom: rem(20px);
+
+  @include tablets {
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+    width: 30.666rem;
+    height: 35rem;
+  }
+
+  @include phones {
+    width: 25.666rem;
+  }
+
+  @include phones-small {
+    margin: 0;
+  }
 }
 
 .reviews__item::before {
@@ -56,12 +103,33 @@
   height: rem(25px);
   border-radius: 0 0 50% 50% / 0 0 100% 100%;
   background: $white;
+
+  @include tablets {
+    bottom: 96%;
+  }
+}
+
+.reviews__pic {
+  @include tablets {
+    width: 13.6rem;
+    height: 13.6rem;
+    margin-bottom: 2rem;
+  }
 }
 
 .reviews__desc {
   margin-left: rem(20px);
   text-align: left;
   width: rem(460px);
+
+  @include tablets {
+    text-align: center;
+    margin: 0;
+  }
+
+  @include phones {
+    width: 25.062rem;
+  }
 }
 
 .reviews__title {
@@ -89,6 +157,11 @@
 .reviews__list {
   display: flex;
   justify-content: center;
+
+  @include tablets {
+    margin-top: 1rem;
+    z-index: 2;
+  }
 }
 
 .reviews__img {
