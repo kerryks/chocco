@@ -3,6 +3,11 @@
   flex-direction: row;
   font-size: rem(18px);
   font-weight: 400;
+
+  @include tablets {
+    flex-direction: column;
+    width: 28.17rem;
+  }
 }
 
 .form__col {
@@ -36,12 +41,26 @@
 .form__input--big {
   height: 100%;
   padding-bottom: 30%;
+
+  @include phones-small {
+    padding: 10%;
+  }
 }
 
 .form__payment {
   display: flex;
   margin-left: 0.625rem;
   margin-bottom: 1rem;
+
+  @include tablets {
+    width: 100%;
+    justify-content: center;
+    margin-top: 8%;
+  }
+
+  @include phones-small {
+    margin-top: 2%;
+  }
 }
 
 .form__view {
@@ -76,14 +95,24 @@
   transform: translate(-50%, -50%);
 }
 
-.form__radio-input:checked + .form__radio-fake:after {
- height: 0.812rem;
- width: 0.812rem;
+.form__radio-input:checked+.form__radio-fake:after {
+  height: 0.812rem;
+  width: 0.812rem;
 }
 
 .form__checkbox {
   margin-left: 0.625rem;
   display: flex;
+
+  @include tablets {
+    width: 100%;
+    justify-content: center;
+    margin-top: 5%;
+  }
+
+  @include phones-small {
+    margin: 0;
+  }
 }
 
 .form__checkbox-input {
@@ -106,11 +135,20 @@
   width: 0;
 }
 
-.form__checkbox-input:checked + .form__checkbox-fake:after {
+.form__checkbox-input:checked+.form__checkbox-fake:after {
   content: "\2714";
   margin-left: 0.3rem;
 }
 
 .form__btn {
   margin-top: 2.625rem;
+
+  @include tablets {
+    display: flex;
+    justify-content: center;
+  }
+
+  @include phones-small {
+    margin-top: 3%;
+  }
 }

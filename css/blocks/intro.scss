@@ -23,6 +23,7 @@
 
   @include phones {
     font-size: 2.875rem;
+    line-height: 2.5rem;
   }
 }
 
@@ -30,6 +31,10 @@
   width: 75%;
   font-size: rem(21px);
   font-weight: 400;
+  
+  @include tablets {
+    width: 21.125rem;
+  }
 }
 
 .intro__btn {

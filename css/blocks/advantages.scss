@@ -2,11 +2,23 @@
   position: relative;
 
   &::before {
-    content: url(../img/advantages/sheet.png);
-    display: block;
+    content: "";
+    overflow: hidden;
+    background: url(../img/advantages/sheet.png) no-repeat;
+    background-size: contain;
+    width: 11.937rem;
+    height: 19.625rem;
     position: absolute;
     left: 0;
     bottom: 7%;
+
+    @include tablets {
+      bottom: 45%;
+    }
+
+    @include phones {
+      display: none;
+    }
   }
 }
 

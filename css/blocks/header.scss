@@ -9,5 +9,9 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
+   
+  @include tablets {
+    justify-content: start
+  }
 }
 

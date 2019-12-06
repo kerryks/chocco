@@ -7,11 +7,14 @@
   background-color: $blue;
 
   &::before {
-    content: url(../img/welcome/sheet.png);
-    display: block;
+    content: "";
+    background: url(../img/welcome/sheet.png) no-repeat;
+    background-size: contain;
+    width: 3.687rem;
+    height: 7rem;
     position: absolute;
-    left: 0;
-    bottom: -7%;
+    left: 1%;
+    bottom: -5%;
 
     @include tablets {
       display: none;
@@ -19,8 +22,11 @@
   }
 
   &::after {
-    content: url(../img/welcome/berries.png);
-    display: block;
+    content: "";
+    background: url(../img/welcome/berries.png) no-repeat;
+    background-size: contain;
+    width: 28.75rem;
+    height: 21.312rem;
     position: absolute;
     right: 0;
     bottom: -4%;

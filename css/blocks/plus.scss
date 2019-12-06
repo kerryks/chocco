@@ -15,6 +15,7 @@
 
   @include tablets {
     margin: 0;
+    width: 24rem;
   }
 }
 
@@ -37,9 +38,9 @@
 
     @include tablets {
       display: none;
+      padding: 1.687rem;
     }
   }
-
   @include tablets {
     margin: 0;
   }
@@ -56,7 +57,6 @@
 }
 
 .plus__head {
-  width: rem(250px);
   font-weight: 600;
   font-size: rem(27px);
   margin-bottom: rem(30px);
@@ -67,6 +67,6 @@
   color: $dark-grey;
 
   @include tablets {
-    width: 55%;
+
   }
 }

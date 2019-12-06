@@ -8,11 +8,20 @@
   color: $white;
 
   &::before {
-    content: url(../img/menu/berry.png);
-    display: block;
+    content: "";
+    overflow: hidden;
+    width: 6.5rem;
+    height: 7.125rem;
+    background: url(../img/menu/berry.png) no-repeat;
+    background-size: contain;
     position: absolute;
     left: 2%;
-    top: -11%;
+    top: -9%;
+    @include tablets {
+      width: 5.187rem;
+      height: 5.625rem;
+      top: -6%;
+    }
   }
 }
 

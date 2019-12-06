@@ -13,6 +13,10 @@
     position: absolute;
     left: 1.25rem;
     bottom: 15%;
+
+    @include tablets {
+      display: none;
+    }
   }
 
   &::after {
@@ -21,6 +25,10 @@
     position: absolute;
     right: 0%;
     bottom: 10%;
+
+    @include tablets {
+      display: none;
+    }
   }
 }
 .order__container {
@@ -33,4 +41,13 @@
 
 .order__title {
   margin-bottom: 3.437rem;
+
+  @include tablets {
+    margin-bottom: 2.375rem;
+  }
+
+  @include phones-small {
+    margin-bottom: 1.875rem;
+    font-size: 2.3rem;
+  }
 }
