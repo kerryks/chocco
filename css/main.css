@@ -311,7 +311,7 @@ html {
   @media screen and (max-width: 480px) {
     html {
       font-size: 13px; } }
-  @media screen and (max-width: 370px) {
+  @media screen and (max-width: 378px) {
     html {
       font-size: 12px; } }
 
@@ -625,7 +625,7 @@ img {
   @media screen and (max-width: 768px) {
     .order__title {
       margin-bottom: 2.375rem; } }
-  @media screen and (max-width: 370px) {
+  @media screen and (max-width: 378px) {
     .order__title {
       margin-bottom: 1.875rem;
       font-size: 2.3rem; } }
@@ -672,7 +672,7 @@ img {
       position: absolute;
       left: 9%;
       bottom: 52%; } }
-  @media screen and (max-width: 370px) {
+  @media screen and (max-width: 378px) {
     .bar-img::after {
       content: "";
       background: url(../img/welcome/berries.png) no-repeat;
@@ -917,7 +917,7 @@ img {
     .team-acco__img {
       width: 10rem;
       height: 13rem; } }
-  @media screen and (max-width: 370px) {
+  @media screen and (max-width: 378px) {
     .team-acco__img {
       width: 8rem;
       height: 11rem; } }
@@ -1060,7 +1060,7 @@ img {
         width: 5.937rem;
         height: 19.812rem;
         bottom: -21%; } }
-    @media screen and (max-width: 370px) {
+    @media screen and (max-width: 378px) {
       .reviews::before {
         width: 4.9rem;
         height: 16rem; } }
@@ -1108,7 +1108,7 @@ img {
   @media screen and (max-width: 480px) {
     .reviews__item {
       width: 25.666rem; } }
-  @media screen and (max-width: 370px) {
+  @media screen and (max-width: 378px) {
     .reviews__item {
       margin: 0; } }
 
@@ -1193,6 +1193,9 @@ img {
     .form__container {
       flex-direction: column;
       width: 28.17rem; } }
+  @media screen and (max-width: 378px) {
+    .form__container {
+      width: 26.17rem; } }
 
 .form__col {
   flex: 1; }
@@ -1218,7 +1221,7 @@ img {
 .form__input--big {
   height: 100%;
   padding-bottom: 30%; }
-  @media screen and (max-width: 370px) {
+  @media screen and (max-width: 378px) {
     .form__input--big {
       padding: 10%; } }
 
@@ -1231,7 +1234,7 @@ img {
       width: 100%;
       justify-content: center;
       margin-top: 8%; } }
-  @media screen and (max-width: 370px) {
+  @media screen and (max-width: 378px) {
     .form__payment {
       margin-top: 2%; } }
 
@@ -1275,7 +1278,7 @@ img {
       width: 100%;
       justify-content: center;
       margin-top: 5%; } }
-  @media screen and (max-width: 370px) {
+  @media screen and (max-width: 378px) {
     .form__checkbox {
       margin: 0; } }
 
@@ -1306,7 +1309,7 @@ img {
     .form__btn {
       display: flex;
       justify-content: center; } }
-  @media screen and (max-width: 370px) {
+  @media screen and (max-width: 378px) {
     .form__btn {
       margin-top: 3%; } }
 

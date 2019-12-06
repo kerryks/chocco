@@ -8,6 +8,10 @@
     flex-direction: column;
     width: 28.17rem;
   }
+
+  @include phones-small {
+    width: 26.17rem;
+  }
 }
 
 .form__col {
