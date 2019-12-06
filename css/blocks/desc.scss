@@ -3,11 +3,16 @@
 
   @include tablets {
     margin-top: 1rem;
+    width: 90%;
   }
 }
 
 .desc__list {
   display: flex;
+
+  @include tablets {
+    justify-content: space-around;
+  }
 }
 
 .desc__item {
@@ -18,9 +23,14 @@
   &:last-child {
     margin-right: 0;
   }
- @include phones {
-   margin-right: 0.1rem;
- }
+
+  @include tablets {
+    text-align: left;
+  }
+
+  @include phones {
+    margin-right: 0.1rem;
+  }
 
 }
 

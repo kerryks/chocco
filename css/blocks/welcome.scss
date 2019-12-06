@@ -50,5 +50,6 @@
   
   @include tablets {
     flex-direction: column-reverse;
+    justify-content: center;
   }
 }
