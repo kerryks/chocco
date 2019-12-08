@@ -752,10 +752,16 @@ img {
   flex-flow: column;
   align-items: center;
   justify-content: center; }
+  @media screen and (max-width: 480px) {
+    .advantages__container {
+      justify-content: flex-start; } }
 
 .advantages__title {
   max-width: 25.625rem;
   margin-bottom: 8%; }
+  @media screen and (max-width: 480px) {
+    .advantages__title {
+      margin-top: 10%; } }
 
 .advantages__head {
   text-align: center;
@@ -784,6 +790,11 @@ img {
     .plus__item {
       margin: 0;
       width: 24rem; } }
+  @media screen and (max-width: 480px) {
+    .plus__item {
+      display: flex;
+      text-align: left;
+      margin-bottom: 8%; } }
 
 .plus__item:last-child .plus__img:after {
   display: none; }
@@ -803,9 +814,9 @@ img {
       .plus__img:after {
         display: none;
         padding: 1.687rem; } }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 480px) {
     .plus__img {
-      margin: 0; } }
+      margin: 4% auto; } }
 
 .plus__icon {
   flex-shrink: 0;
@@ -816,10 +827,17 @@ img {
   stroke-width: 0.75;
   stroke-miterlimit: 10; }
 
+@media screen and (max-width: 480px) {
+  .plus__wrap {
+    margin-left: 1rem; } }
+
 .plus__head {
   font-weight: 600;
   font-size: 1.6875rem;
   margin-bottom: 1.875rem; }
+  @media screen and (max-width: 480px) {
+    .plus__head {
+      margin-bottom: 0.875rem; } }
 
 .plus__text {
   font-weight: 300;
@@ -873,10 +891,13 @@ img {
 .team__title {
   max-width: 25.625rem;
   padding: 8%; }
+  @media screen and (max-width: 768px) {
+    .team__title {
+      padding: 0;
+      margin-top: 4%; } }
   @media screen and (max-width: 480px) {
     .team__title {
-      z-index: 2;
-      padding: 4%; } }
+      z-index: 2; } }
 
 .team-acco {
   display: flex;
@@ -887,14 +908,14 @@ img {
     .team-acco {
       columns: 2;
       flex-wrap: wrap;
-      width: 100%;
-      height: 100%; } }
+      width: 100%; } }
 
 .team-acco__man {
   display: flex;
   flex-flow: column;
   align-items: center;
-  margin-right: 1.25rem; }
+  margin-right: 1.25rem;
+  width: 25%; }
   @media screen and (max-width: 768px) {
     .team-acco__man {
       width: 35%;
@@ -907,24 +928,23 @@ img {
   display: flex; }
 
 .team-acco__img {
-  margin-bottom: 1.5625rem;
-  width: 13.75rem;
-  height: 18rem; }
+  margin-bottom: 1.5625rem; }
   @media screen and (max-width: 768px) {
     .team-acco__img {
       padding: 1rem; } }
   @media screen and (max-width: 480px) {
     .team-acco__img {
-      width: 10rem;
-      height: 13rem; } }
+      width: 14rem;
+      height: 18rem; } }
   @media screen and (max-width: 378px) {
     .team-acco__img {
-      width: 8rem;
-      height: 11rem; } }
+      width: 12rem;
+      height: 14rem; } }
 
 .team-acco__photo {
   width: 100%;
-  height: 100%; }
+  height: 100%;
+  object-fit: cover; }
 
 .team-acco__name {
   font-size: 1.3125rem;
@@ -950,14 +970,11 @@ img {
 .team-acco__content {
   display: none;
   flex-flow: column;
-  align-items: center; }
-  @media screen and (max-width: 768px) {
-    .team-acco__content {
-      width: 50%; } }
+  align-items: center;
+  width: 80%; }
   @media screen and (max-width: 480px) {
     .team-acco__content {
-      width: 90%;
-      height: 0.8rem; } }
+      width: 90%; } }
 
 .team-acco__position {
   margin-bottom: 0.375rem;
@@ -984,7 +1001,8 @@ img {
     background-size: contain;
     position: absolute;
     left: 2%;
-    top: -9%; }
+    top: -9%;
+    z-index: 2; }
     @media screen and (max-width: 768px) {
       .menu::before {
         width: 5.187rem;
@@ -1353,7 +1371,8 @@ img {
 
 .map__pic {
   width: 100%;
-  height: 100%; }
+  height: 100%;
+  object-fit: cover; }
 
 .footer__container {
   height: 5.875rem;

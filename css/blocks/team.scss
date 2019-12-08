@@ -55,9 +55,12 @@
   max-width: rem(410px);
   padding: 8%;
 
+  @include tablets {
+    padding: 0;
+    margin-top: 4%;
+  }
   @include phones {
     z-index: 2;
-    padding: 4%;
   }
 
 }
@@ -73,7 +76,6 @@
     columns: 2;
     flex-wrap: wrap;
     width: 100%;
-    height: 100%;
   }
 }
 
@@ -82,6 +84,7 @@
   flex-flow: column;
   align-items: center;
   margin-right: rem(20px);
+  width: 25%;
 
   @include tablets {
     width: 35%;
@@ -100,27 +103,27 @@
 
 .team-acco__img {
   margin-bottom: rem(25px);
-  width: rem(220px);
-  height: rem(288px);
+
 
   @include tablets {
     padding: 1rem;
   }
 
   @include phones {
-    width: 10rem;
-    height: 13rem;
+    width: 14rem;
+    height: 18rem;
   }
 
   @include phones-small {
-    width: 8rem;
-    height: 11rem;
+    width: 12rem;
+    height: 14rem;
   }
 }
 
 .team-acco__photo {
   width: 100%;
   height: 100%;
+  object-fit: cover;
 }
 
 .team-acco__name {
@@ -151,14 +154,15 @@
   display: none;
   flex-flow: column;
   align-items: center;
+  width: 80%;
 
   @include tablets {
-    width: 50%;
+
   }
 
   @include phones {
     width: 90%;
-    height: 0.8rem;
+
   }
 }
 

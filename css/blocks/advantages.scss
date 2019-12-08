@@ -27,11 +27,19 @@
   flex-flow: column;
   align-items: center;
   justify-content: center;
+
+  @include phones {
+    justify-content: flex-start;
+  }
 }
 
 .advantages__title {
   max-width: rem(410px);
   margin-bottom: 8%;
+
+  @include phones {
+    margin-top: 10%;
+  }
 }
 
 .advantages__head {
