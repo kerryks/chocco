@@ -854,7 +854,7 @@ img {
     background-size: contain;
     position: absolute;
     right: 0;
-    bottom: 40%; }
+    bottom: 70%; }
     @media screen and (max-width: 768px) {
       .team::before {
         width: 9.687rem;
@@ -872,7 +872,7 @@ img {
     background-size: contain;
     position: absolute;
     right: 0%;
-    bottom: 89%; }
+    bottom: 95%; }
     @media screen and (max-width: 768px) {
       .team::after {
         width: 6.375rem;
@@ -1001,7 +1001,7 @@ img {
     background-size: contain;
     position: absolute;
     left: 2%;
-    top: -9%;
+    top: -7%;
     z-index: 2; }
     @media screen and (max-width: 768px) {
       .menu::before {
