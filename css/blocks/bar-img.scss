@@ -1,0 +1,77 @@
+.bar-img {
+  width: 50%;
+
+  @include tablets {
+    width: 85%;
+
+    &::after {
+      content: "";
+      background: url(../img/welcome/berries.png) no-repeat;
+      background-size: contain;
+      width: 28.75rem;
+      height: 21.312rem;
+      position: absolute;
+      right: 12%;
+      bottom: 45%;
+    }
+
+    &::before {
+      content: "";
+      background: url(../img/welcome/sheet.png) no-repeat;
+      background-size: contain;
+      width: 3.687rem;
+      height: 7rem;
+      position: absolute;
+      left: 18%;
+      bottom: 50%;
+    }
+  }
+
+  @include phones {
+    &::after {
+      content: "";
+      background: url(../img/welcome/berries.png) no-repeat;
+      background-size: contain;
+      width: 22.75rem;
+      height: 17.312rem;
+      position: absolute;
+      right: 0%;
+      bottom: 46%;
+    }
+
+    &::before {
+      content: "";
+      background: url(../img/welcome/sheet.png) no-repeat;
+      background-size: contain;
+      width: 3.687rem;
+      height: 7rem;
+      position: absolute;
+      left: 9%;
+      bottom: 52%;
+    }
+  }
+
+  @include phones-small {
+    &::after {
+      content: "";
+      background: url(../img/welcome/berries.png) no-repeat;
+      background-size: contain;
+      width: 19.75rem;
+      height: 15.312rem;
+      position: absolute;
+      right: 6%;
+      bottom: 50%;
+    }
+
+    &::before {
+      content: "";
+      background: url(../img/welcome/sheet.png) no-repeat;
+      background-size: contain;
+      width: 2.687rem;
+      height: 6rem;
+      position: absolute;
+      left: 10%;
+      bottom: 57%;
+    }
+  }
+}

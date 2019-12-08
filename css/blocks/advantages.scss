@@ -1,17 +1,56 @@
+.advantages {
+  position: relative;
+
+  &::before {
+    content: "";
+    overflow: hidden;
+    background: url(../img/advantages/sheet.png) no-repeat;
+    background-size: contain;
+    width: 11.937rem;
+    height: 19.625rem;
+    position: absolute;
+    left: 0;
+    bottom: 7%;
+
+    @include tablets {
+      bottom: 45%;
+    }
+
+    @include phones {
+      display: none;
+    }
+  }
+}
+
 .advantages__container {
   display: flex;
   flex-flow: column;
+  align-items: center;
+  justify-content: center;
+
+  @include phones {
+    justify-content: flex-start;
+  }
 }
 
 .advantages__title {
-  margin-bottom: 100px;
-  
-  h2 {
-    text-align: center;
-  }
+  max-width: rem(410px);
+  margin-bottom: 8%;
 
-  p {
-  font-size: 18px;
-  font-weight: 400;
+  @include phones {
+    margin-top: 10%;
   }
+}
+
+.advantages__head {
+  text-align: center;
+  margin-bottom: rem(20px);
+}
+
+.advantages__desc {
+  text-align: center;
+  font-size: rem(18px);
+  font-weight: 400;
+  color: $dark-grey;
+  font-weight: 400;
 }

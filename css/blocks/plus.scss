@@ -1,33 +1,90 @@
 .plus {
   display: flex;
   text-align: center;
+
+  @include tablets {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.plus__item {
+  margin-right: rem(60px);
+  z-index: 2;
+  position: relative;
+
+  @include tablets {
+    margin: 0;
+    width: 24rem;
+  }
+
+  @include phones {
+    display: flex;
+    text-align: left;
+    margin-bottom: 8%;
+  }
+}
+
+.plus__item:last-child .plus__img:after {
+  display: none;
 }
 
 .plus__img {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
+  display: inline-block;
   background: $grey;
   border-radius: 50%;
-  height: 80px;
-  width: 80px;
   margin: 10% auto;
+  padding: rem(20px);
 
   &:after {
-    content: url(/img/advantages/dot_after.png);
+    content: url(../img/advantages/dot_after.png);
     display: flex;
-    margin-left: 110%;
-  }
+    left: 100%;
+    position: absolute;
 
-  &:nth-last-child(1) {
-    &:after {
+    @include tablets {
       display: none;
+      padding: 1.687rem;
     }
+  }
+  @include phones {
+    margin: 4% auto;
+
   }
 }
 
 .plus__icon {
-  // height: 50px;
-  margin-left: 19%;
-  width: 50px;
+  flex-shrink: 0;
+  height: rem(50px);
+  width: rem(50px);
+  fill: none;
+  stroke: $black;
+  stroke-width: 0.75;
+  stroke-miterlimit: 10;
+}
+
+.plus__wrap {
+
+  @include phones {
+    margin-left: 1rem;
+  }
+}
+
+.plus__head {
+  font-weight: 600;
+  font-size: rem(27px);
+  margin-bottom: rem(30px);
+
+  @include phones {
+    margin-bottom: 0.875rem;
+  }
+}
+
+.plus__text {
+  font-weight: 300;
+  color: $dark-grey;
+
+  @include tablets {
+
+  }
 }
