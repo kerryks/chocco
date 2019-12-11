@@ -32,6 +32,10 @@ body {
   text-decoration: none;
 }
 
+body.menu-open {
+  overflow: hidden;
+}
+
 .wrapper {
   position: relative;
   width: 100%;

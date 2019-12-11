@@ -1,0 +1,23 @@
+.overlay-menu--active {
+  background-color: $bg-overlay;
+  opacity: 0.99;
+  text-align: center;
+}
+
+.overlay-menu__list {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+.overlay-menu__link {
+  text-decoration: none;
+  color: $white;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 72px;
+}
+
+.overlay-menu__link:first-letter {
+  text-transform: uppercase;
+}

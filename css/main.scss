@@ -10,6 +10,7 @@ $chocco: #323232;
 $bg-menu: #2f3234;
 $yellow: #dde3bd;
 $bg-slider: #f8faf9;
+$bg-overlay: #2f3234;
 
 //displays
 
@@ -31,7 +32,6 @@ $phones-small: 378px;
 @import "blocks/header.scss";
 @import "blocks/nav.scss";
 @import "blocks/contact.scss";
-@import "blocks/fixed-menu.scss";
 @import "blocks/welcome.scss";
 @import "blocks/intro.scss";
 @import "blocks/order.scss";
@@ -41,6 +41,7 @@ $phones-small: 378px;
 @import "blocks/plus.scss";
 @import "blocks/slider.scss";
 @import "blocks/ingredient.scss";
+@import "blocks/dropdown.scss";
 @import "blocks/team.scss";
 @import "blocks/menu.scss";
 @import "blocks/reviews.scss";
@@ -49,3 +50,6 @@ $phones-small: 378px;
 @import "blocks/map.scss";
 @import "blocks/footer.scss";
 @import "blocks/socials.scss";
+@import "blocks/fixed-menu.scss";
+@import "blocks/hamburger-menu.scss";
+@import "blocks/overlay-menu.scss";
