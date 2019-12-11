@@ -3,11 +3,13 @@ $white: #fff;
 $black: #0d0d0d;
 $green: #0f5a47;
 $grey: #f8faf9;
+$dark-blue: #00accf;
 $blue: #61c4d9;
 $dark-grey: #666666;
 $chocco: #323232;
 $bg-menu: #2f3234;
 $yellow: #dde3bd;
+$bg-slider: #f8faf9;
 
 //displays
 
@@ -37,6 +39,8 @@ $phones-small: 378px;
 @import "blocks/desc.scss";
 @import "blocks/advantages.scss";
 @import "blocks/plus.scss";
+@import "blocks/slider.scss";
+@import "blocks/ingredient.scss";
 @import "blocks/team.scss";
 @import "blocks/menu.scss";
 @import "blocks/reviews.scss";

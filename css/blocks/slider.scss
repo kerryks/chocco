@@ -1,0 +1,130 @@
+.slider {
+  background-color: $bg-slider;
+
+  &::before {
+    content: "";
+    background: url(../img/slider/raspberries.png) no-repeat;
+    background-size: contain;
+    width: 10.062rem;
+    height: 19.687rem;
+    position: absolute;
+    left: 0;
+    bottom: 73%;
+  }
+}
+
+.slider__container {
+  display: flex;
+  align-items: center;
+}
+
+.slider__btn {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  height: 9rem;
+}
+
+.slider__btn--left {
+  left: 4%;
+  top: 30%;
+}
+
+.slider__btn--right {
+  right: 5%;
+  top: 30%;
+}
+
+.slider__arrow {
+  width: 1.5rem;
+  height: 2rem;
+}
+
+.slider__arrow--left {
+  transform: rotate(90deg);
+}
+
+.slider__arrow--right {
+  transform: rotate(-90deg);
+}
+
+.slider__item {
+  display: flex;
+  position: relative;
+}
+
+.slider__left {
+  flex: 1;
+
+  &::after {
+    content: "";
+    background: url(../img/slider/sheet2.png) no-repeat;
+    background-size: contain;
+    width: 6.187rem;
+    height: 4.562rem;
+    position: absolute;
+    right: 55%;
+    bottom: 6%;
+  }
+
+  &::before {
+    content: "";
+    background: url(../img/slider/sheet1.png) no-repeat;
+    background-size: contain;
+    width: 4.687rem;
+    height: 5.75rem;
+    position: absolute;
+    left: -5%;
+    bottom: 61%;
+  }
+}
+
+.slider__pic {
+  width: 24.5rem;
+  height: 24.5rem;
+
+}
+
+.slider__right {
+  flex: 1;
+}
+
+.slider__head {
+  font-size: 36px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 1.375rem;
+  margin-top: 5.312rem;
+}
+
+.slider__text {
+  font-size: 20px;
+  font-weight: 400;
+  color: $dark-grey;
+  margin-bottom: 2.937rem;
+}
+
+.slider__calories {
+  font-size: 18px;
+  font-weight: 400;
+  color: $chocco;
+}
+
+.slider__calories-desc {
+  font-size: 18px;
+  font-weight: 600;
+  color: $chocco;
+  margin-bottom: 2.375rem;
+}
+
+.slider__options {
+  display: flex;
+}
+
+.slider__price {
+  font-size: 60px;
+  font-weight: 300;
+  line-height: 60px;
+  text-transform: uppercase;
+  margin-right: 1.937rem;
+}
