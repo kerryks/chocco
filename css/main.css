@@ -827,6 +827,9 @@ img {
     position: absolute;
     left: 0;
     bottom: 73%; }
+    @media screen and (max-width: 480px) {
+      .slider::before {
+        display: none; } }
 
 .slider__container {
   display: flex;
@@ -836,15 +839,32 @@ img {
   display: flex;
   align-items: center;
   position: absolute;
-  height: 9rem; }
+  height: 9rem;
+  z-index: 3; }
 
 .slider__btn--left {
   left: 4%;
   top: 30%; }
+  @media screen and (max-width: 768px) {
+    .slider__btn--left {
+      left: 17%;
+      top: 28.5%; } }
+  @media screen and (max-width: 480px) {
+    .slider__btn--left {
+      left: 4%;
+      top: 27%; } }
 
 .slider__btn--right {
   right: 5%;
   top: 30%; }
+  @media screen and (max-width: 768px) {
+    .slider__btn--right {
+      right: 17%;
+      top: 28.5%; } }
+  @media screen and (max-width: 480px) {
+    .slider__btn--right {
+      right: 4%;
+      top: 27%; } }
 
 .slider__arrow {
   width: 1.5rem;
@@ -856,12 +876,24 @@ img {
 .slider__arrow--right {
   transform: rotate(-90deg); }
 
+.slider__list {
+  display: flex;
+  justify-content: center; }
+
 .slider__item {
   display: flex;
   position: relative; }
+  @media screen and (max-width: 768px) {
+    .slider__item {
+      flex-flow: column;
+      align-items: center;
+      width: 90%; } }
 
 .slider__left {
-  flex: 1; }
+  flex: 1;
+  width: 100%;
+  height: 100%;
+  text-align: center; }
   .slider__left::after {
     content: "";
     background: url(../img/slider/sheet2.png) no-repeat;
@@ -871,6 +903,16 @@ img {
     position: absolute;
     right: 55%;
     bottom: 6%; }
+    @media screen and (max-width: 768px) {
+      .slider__left::after {
+        right: 16%;
+        bottom: 45%; } }
+    @media screen and (max-width: 480px) {
+      .slider__left::after {
+        width: 5rem;
+        height: 3.687rem;
+        right: 10%;
+        bottom: 61%; } }
   .slider__left::before {
     content: "";
     background: url(../img/slider/sheet1.png) no-repeat;
@@ -880,13 +922,32 @@ img {
     position: absolute;
     left: -5%;
     bottom: 61%; }
+    @media screen and (max-width: 768px) {
+      .slider__left::before {
+        left: 15%;
+        bottom: 79%; } }
+    @media screen and (max-width: 480px) {
+      .slider__left::before {
+        width: 3.75rem;
+        height: 4.375rem;
+        left: 8%;
+        bottom: 84%; } }
 
 .slider__pic {
   width: 24.5rem;
   height: 24.5rem; }
+  @media screen and (max-width: 480px) {
+    .slider__pic {
+      width: 19.625rem;
+      height: 19.812rem; } }
+  @media screen and (max-width: 378px) {
+    .slider__pic {
+      width: 14.625rem;
+      height: 14.812rem; } }
 
 .slider__right {
-  flex: 1; }
+  flex: 1;
+  text-align: center; }
 
 .slider__head {
   font-size: 36px;
@@ -894,19 +955,55 @@ img {
   text-transform: uppercase;
   margin-bottom: 1.375rem;
   margin-top: 5.312rem; }
+  @media screen and (max-width: 768px) {
+    .slider__head {
+      margin-top: 2.312rem; } }
+  @media screen and (max-width: 480px) {
+    .slider__head {
+      font-size: 33px; } }
+  @media screen and (max-width: 378px) {
+    .slider__head {
+      font-size: 23px; } }
 
 .slider__text {
   font-size: 20px;
   font-weight: 400;
   color: #666666;
   margin-bottom: 2.937rem; }
+  @media screen and (max-width: 480px) {
+    .slider__text {
+      font-size: 16px; } }
+  @media screen and (max-width: 378px) {
+    .slider__text {
+      margin-bottom: 1rem; } }
 
-.slider__calories {
+.slider__desc {
+  display: flex;
+  width: 50%;
+  justify-content: space-between;
+  text-align: left;
+  z-index: 3; }
+  @media screen and (max-width: 768px) {
+    .slider__desc {
+      width: 90%;
+      justify-content: end;
+      margin-left: 23%; } }
+  @media screen and (max-width: 480px) {
+    .slider__desc {
+      width: 100%;
+      justify-content: center;
+      margin: 0; } }
+
+@media screen and (max-width: 768px) {
+  .slider__cat {
+    margin-left: 9%; } }
+
+.slider__cat-text {
   font-size: 18px;
   font-weight: 400;
   color: #323232; }
 
-.slider__calories-desc {
+.slider__cat-desc {
   font-size: 18px;
   font-weight: 600;
   color: #323232;
@@ -914,6 +1011,9 @@ img {
 
 .slider__options {
   display: flex; }
+  @media screen and (max-width: 768px) {
+    .slider__options {
+      justify-content: center; } }
 
 .slider__price {
   font-size: 60px;
@@ -921,6 +1021,9 @@ img {
   line-height: 60px;
   text-transform: uppercase;
   margin-right: 1.937rem; }
+  @media screen and (max-width: 378px) {
+    .slider__price {
+      font-size: 46px; } }
 
 .ingredient {
   display: flex;
@@ -939,6 +1042,13 @@ img {
     background-color: #61c4d9;
     transition: 0.3s;
     transform: scale(1); }
+  @media screen and (max-width: 768px) {
+    .ingredient {
+      right: -4%;
+      top: -8.312rem; } }
+  @media screen and (max-width: 378px) {
+    .ingredient {
+      top: -3.312rem; } }
 
 .ingredient__pic {
   flex-shrink: 0;
@@ -967,7 +1077,8 @@ img {
     background-size: contain;
     position: absolute;
     right: 0;
-    bottom: 70%; }
+    bottom: 70%;
+    z-index: 0; }
     @media screen and (max-width: 768px) {
       .team::before {
         width: 9.687rem;
@@ -1454,7 +1565,8 @@ img {
   color: #fff;
   font-size: 1.1875rem;
   font-weight: 600;
-  outline: none; }
+  outline: none;
+  z-index: 3; }
 
 .btn--sub:hover,
 .btn--sub:active,
@@ -1473,6 +1585,9 @@ img {
 .btn--res:focus {
   background-color: transparent;
   border-color: #dde3bd; }
+
+.btn--phone {
+  padding: 0.5rem 1.5rem; }
 
 .map {
   display: flex;
@@ -1594,15 +1709,31 @@ img {
   transform: rotate(-45deg);
   top: 0; }
 
-.overlay-menu--active {
+.overlay-menu__wrap {
   background-color: #2f3234;
   opacity: 0.99;
-  text-align: center; }
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  height: 100%;
+  transition: all ease 1s;
+  display: none; }
+
+.overlay-menu__wrap--active {
+  display: block; }
 
 .overlay-menu__list {
   display: flex;
   flex-flow: column;
-  align-items: center; }
+  align-items: center;
+  margin-top: 8.937rem; }
+  @media screen and (max-width: 480px) {
+    .overlay-menu__list {
+      margin-top: 5.937rem; } }
+  @media screen and (max-width: 378px) {
+    .overlay-menu__list {
+      margin-top: 1.937rem; } }
 
 .overlay-menu__link {
   text-decoration: none;
@@ -1610,6 +1741,9 @@ img {
   font-size: 36px;
   font-weight: 400;
   line-height: 72px; }
+  @media screen and (max-width: 378px) {
+    .overlay-menu__link {
+      font-size: 32px; } }
 
 .overlay-menu__link:first-letter {
   text-transform: uppercase; }

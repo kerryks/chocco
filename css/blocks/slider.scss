@@ -10,6 +10,10 @@
     position: absolute;
     left: 0;
     bottom: 73%;
+
+    @include phones {
+      display: none;
+    }
   }
 }
 
@@ -23,16 +27,37 @@
   align-items: center;
   position: absolute;
   height: 9rem;
+  z-index: 3;
 }
 
 .slider__btn--left {
   left: 4%;
   top: 30%;
+
+  @include tablets {
+    left: 17%;
+    top: 28.5%;
+  }
+
+  @include phones {
+    left: 4%;
+    top: 27%;
+  }
 }
 
 .slider__btn--right {
   right: 5%;
   top: 30%;
+
+  @include tablets {
+    right: 17%;
+    top: 28.5%;
+  }
+
+  @include phones {
+    right: 4%;
+    top: 27%;
+  }
 }
 
 .slider__arrow {
@@ -48,13 +73,27 @@
   transform: rotate(-90deg);
 }
 
+.slider__list {
+  display: flex;
+  justify-content: center;
+}
+
 .slider__item {
   display: flex;
   position: relative;
+
+  @include tablets {
+    flex-flow: column;
+    align-items: center;
+    width: 90%;
+  }
 }
 
 .slider__left {
   flex: 1;
+  width: 100%;
+  height: 100%;
+  text-align: center;
 
   &::after {
     content: "";
@@ -65,6 +104,18 @@
     position: absolute;
     right: 55%;
     bottom: 6%;
+
+    @include tablets {
+      right: 16%;
+      bottom: 45%;
+    }
+
+    @include phones {
+      width: 5rem;
+      height: 3.687rem;
+      right: 10%;
+      bottom: 61%;
+    }
   }
 
   &::before {
@@ -76,17 +127,40 @@
     position: absolute;
     left: -5%;
     bottom: 61%;
+
+    @include tablets {
+      left: 15%;
+      bottom: 79%;
+    }
+
+    @include phones {
+      width: 3.75rem;
+      height: 4.375rem;
+      left: 8%;
+      bottom: 84%;
+    }
   }
 }
+
 
 .slider__pic {
   width: 24.5rem;
   height: 24.5rem;
 
+  @include phones {
+    width: 19.625rem;
+    height: 19.812rem;
+  }
+
+  @include phones-small {
+    width: 14.625rem;
+    height: 14.812rem;
+  }
 }
 
 .slider__right {
   flex: 1;
+  text-align: center;
 }
 
 .slider__head {
@@ -95,6 +169,18 @@
   text-transform: uppercase;
   margin-bottom: 1.375rem;
   margin-top: 5.312rem;
+
+  @include tablets {
+    margin-top: 2.312rem;
+  }
+
+  @include phones {
+    font-size: 33px;
+  }
+
+  @include phones-small {
+    font-size: 23px;
+  }
 }
 
 .slider__text {
@@ -102,15 +188,50 @@
   font-weight: 400;
   color: $dark-grey;
   margin-bottom: 2.937rem;
+
+  @include phones {
+    font-size: 16px;
+  }
+
+  @include phones-small {
+    margin-bottom: 1rem;
+  }
 }
 
-.slider__calories {
+.slider__desc {
+  display: flex;
+  width: 50%;
+  justify-content: space-between;
+  text-align: left;
+  z-index: 3;
+
+  @include tablets {
+    width: 90%;
+    justify-content: end;
+    margin-left: 23%;
+  }
+
+  @include phones {
+    width: 100%;
+    justify-content: center;
+    margin: 0;
+  }
+}
+
+.slider__cat {
+
+  @include tablets {
+    margin-left: 9%;
+  }
+}
+
+.slider__cat-text {
   font-size: 18px;
   font-weight: 400;
   color: $chocco;
 }
 
-.slider__calories-desc {
+.slider__cat-desc {
   font-size: 18px;
   font-weight: 600;
   color: $chocco;
@@ -119,6 +240,10 @@
 
 .slider__options {
   display: flex;
+
+  @include tablets {
+    justify-content: center;
+  }
 }
 
 .slider__price {
@@ -127,4 +252,8 @@
   line-height: 60px;
   text-transform: uppercase;
   margin-right: 1.937rem;
+
+  @include phones-small {
+    font-size: 46px;
+  }
 }

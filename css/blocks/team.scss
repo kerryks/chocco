@@ -11,6 +11,7 @@
     position: absolute;
     right: 0;
     bottom: 70%;
+    z-index: 0;
 
     @include tablets {
       width: 9.687rem;

@@ -8,6 +8,7 @@
   font-size: rem(19px);
   font-weight: 600;
   outline: none;
+  z-index: 3;
 } 
 
 .btn--sub:hover,
@@ -29,4 +30,8 @@
 .btn--res:focus {
   background-color: transparent;
   border-color: $yellow;
+}
+
+.btn--phone {
+  padding: 0.5rem 1.5rem;
 }

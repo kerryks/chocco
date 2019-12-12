@@ -17,6 +17,19 @@
     transition: 0.3s;
     transform: scale(1.0);
   }
+
+  @include tablets {
+    right: -4%;
+    top: -8.312rem;
+  }
+
+  @include phones {
+    
+  }
+
+  @include phones-small {
+    top: -3.312rem;
+  }
 }
 
 .ingredient__pic {

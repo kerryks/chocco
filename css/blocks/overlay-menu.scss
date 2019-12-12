@@ -1,13 +1,33 @@
-.overlay-menu--active {
+.overlay-menu__wrap {
   background-color: $bg-overlay;
   opacity: 0.99;
   text-align: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  height: 100%;
+  transition: all ease 1s;
+  display: none;
+}
+
+.overlay-menu__wrap--active {
+  display: block;
 }
 
 .overlay-menu__list {
   display: flex;
   flex-flow: column;
   align-items: center;
+  margin-top: 8.937rem;
+  
+
+  @include phones {
+    margin-top: 5.937rem;
+  }
+
+  @include phones-small {
+    margin-top: 1.937rem;
+  }
 }
 
 .overlay-menu__link {
@@ -16,6 +36,10 @@
   font-size: 36px;
   font-weight: 400;
   line-height: 72px;
+
+  @include phones-small {
+    font-size: 32px;
+  }
 }
 
 .overlay-menu__link:first-letter {
