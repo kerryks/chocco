@@ -1048,7 +1048,7 @@ img {
       top: -8.312rem; } }
   @media screen and (max-width: 480px) {
     .ingredient {
-      top: -5.312rem; } }
+      top: -5rem; } }
   @media screen and (max-width: 378px) {
     .ingredient {
       top: -3.312rem; } }
