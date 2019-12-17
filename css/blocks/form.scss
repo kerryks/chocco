@@ -1,0 +1,158 @@
+.form__container {
+  display: flex;
+  flex-direction: row;
+  font-size: rem(18px);
+  font-weight: 400;
+
+  @include tablets {
+    flex-direction: column;
+    width: 28.17rem;
+  }
+
+  @include phones-small {
+    width: 26.17rem;
+  }
+}
+
+.form__col {
+  flex: 1;
+
+}
+
+.form__row {
+  display: flex;
+}
+
+.form__label {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 0.625rem;
+}
+
+.form__input {
+  width: 100%;
+  padding: 1.25rem;
+  border: 1.25rem;
+  outline: none;
+  border: 0.188rem solid transparent;
+
+  &:focus {
+    border-color: $yellow;
+  }
+}
+
+.form__input--big {
+  height: 100%;
+  padding-bottom: 30%;
+
+  @include phones-small {
+    padding: 10%;
+  }
+}
+
+.form__payment {
+  display: flex;
+  margin-left: 0.625rem;
+  margin-bottom: 1rem;
+
+  @include tablets {
+    width: 100%;
+    justify-content: center;
+    margin-top: 8%;
+  }
+
+  @include phones-small {
+    margin-top: 2%;
+  }
+}
+
+.form__view {
+  display: flex;
+  align-items: center;
+  margin-right: 1.875rem;
+}
+
+.form__radio-input {
+  display: none;
+}
+
+.form__radio-fake {
+  position: relative;
+  height: 1.562rem;
+  width: 1.562rem;
+  margin-right: 0.625rem;
+  background-color: $white;
+  border-radius: 50%;
+}
+
+.form__radio-fake::after {
+  position: absolute;
+  content: "";
+  display: inline-block;
+  height: 0;
+  width: 0;
+  border-radius: 50%;
+  background-color: $green;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.form__radio-input:checked+.form__radio-fake:after {
+  height: 0.812rem;
+  width: 0.812rem;
+}
+
+.form__checkbox {
+  margin-left: 0.625rem;
+  display: flex;
+
+  @include tablets {
+    width: 100%;
+    justify-content: center;
+    margin-top: 5%;
+  }
+
+  @include phones-small {
+    margin: 0;
+  }
+}
+
+.form__checkbox-input {
+  display: none;
+}
+
+.form__checkbox-fake {
+  position: relative;
+  height: 1.562rem;
+  width: 1.562rem;
+  margin-right: 0.625rem;
+  background-color: $white;
+}
+
+.form__checkbox-fake::after {
+  position: absolute;
+  content: "";
+  display: inline-block;
+  height: 0;
+  width: 0;
+}
+
+.form__checkbox-input:checked+.form__checkbox-fake:after {
+  content: "\2714";
+  margin-left: 0.3rem;
+}
+
+.form__btn {
+  margin-top: 2.625rem;
+
+  @include tablets {
+    display: flex;
+    justify-content: center;
+  }
+
+  @include phones-small {
+    margin-top: 3%;
+  }
+}
