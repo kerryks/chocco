@@ -143,12 +143,97 @@
 
     <section class="section slider">
       <div class="container slider__container">
-        <a href="#" class="slider__btn slider__btn--left">
+        <a href="#" class="slider__btn slider__btn--left" id="left">
           <svg class="slider__arrow slider__arrow--left">
             <use xlink:href="./img/sprite/sprite.svg#arrow"></use>
           </svg>
         </a>
-        <ul class="slider__list">
+        <ul class="slider__list" id="slider">
+          <li class="slider__item">
+            <div class="slider__left">
+              <img src="./img/slider/bars.png" alt="" class="slider__pic">
+            </div>
+            <div class="slider__right">
+              <div class="slider__head">Батончик “Морские водоросли”</div>
+              <p class="slider__text">Гранола из морских водорослей с овсом, миндалем и тыквенными семечками. В состав
+                также входят: сухое молоко, заменитель сахара и какао бобы.</p>
+
+              <div class="slider__desc">
+                <div class="slider__cat">
+                  <div class="slider__cat-text">Калорийность</div>
+                  <div class="slider__cat-desc">120 ккал</div>
+                </div>
+                <div class="slider__cat">
+                  <div class="slider__cat-text">Вес</div>
+                  <div class="slider__cat-desc">98 грамм</div>
+                </div>
+              </div>
+              <div class="slider__options">
+                <div class="slider__price">140 ₽</div>
+                <button class="btn btn--sub btn--phone" type="submit">Заказать</button>
+              </div>
+            </div>
+            <div class="ingredient">
+              <svg class="ingredient__pic">
+                <use xlink:href="./img/sprite/sprite.svg#chocco-bar"></use>
+              </svg>
+              <div class="ingredient__text">состав</div>
+              <div class="ingredient__dropdown">
+                <ul class="dropdown__list">
+                  <li class="dropdown__item">
+                    <svg class="dropdown__pic">
+                      <use xlink:href="./img/sprite/sprite.svg#oat"></use>
+                    </svg>
+                    <div class="dropdown__text">Овес</div>
+                    <div class="dropdown__heft">25г</div>
+                  </li>
+                  <li class="dropdown__item">
+                    <svg class="dropdown__pic">
+                      <use xlink:href="./img/sprite/sprite.svg#seaweed"></use>
+                    </svg>
+                    <div class="dropdown__text">Мор. водоросли</div>
+                    <div class="dropdown__heft">15г</div>
+                  </li>
+                  <li class="dropdown__item">
+                    <svg class="dropdown__pic">
+                      <use xlink:href="./img/sprite/sprite.svg#almond"></use>
+                    </svg>
+                    <div class="dropdown__text">Миндаль</div>
+                    <div class="dropdown__heft">20г</div>
+                  </li>
+                  <li class="dropdown__item">
+                    <svg class="dropdown__pic">
+                      <use xlink:href="./img/sprite/sprite.svg#washing-powder"></use>
+                    </svg>
+                    <div class="dropdown__text">Сухое молоко</div>
+                    <div class="dropdown__heft">10г</div>
+                  </li>
+                  <li class="dropdown__item">
+                    <svg class="dropdown__pic">
+                      <use xlink:href="./img/sprite/sprite.svg#seeds"></use>
+                    </svg>
+                    <div class="dropdown__text">Тыкв. семечки</div>
+                    <div class="dropdown__heft">10г</div>
+                  </li>
+                  <li class="dropdown__item">
+                    <svg class="dropdown__pic">
+                      <use xlink:href="./img/sprite/sprite.svg#apitherapy"></use>
+                    </svg>
+                    <div class="dropdown__text">Зам. сахара</div>
+                    <div class="dropdown__heft">4г</div>
+                  </li>
+                  <li class="dropdown__item">
+                    <svg class="dropdown__pic">
+                      <use xlink:href="./img/sprite/sprite.svg#beans"></use>
+                    </svg>
+                    <div class="dropdown__text">Какао бобы</div>
+                    <div class="dropdown__heft">4г</div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+          </li>
           <li class="slider__item">
             <div class="slider__left">
               <img src="./img/slider/bars.png" alt="" class="slider__pic">
@@ -235,7 +320,7 @@
 
           </li>
         </ul>
-        <a href="#" class="slider__btn slider__btn--right">
+        <a href="#" class="slider__btn slider__btn--right" id="right">
           <svg class="slider__arrow slider__arrow--right">
             <use xlink:href="./img/sprite/sprite.svg#arrow"></use>
           </svg>
@@ -247,7 +332,7 @@
       <div class="container team__container">
         <h2 class="team__title">команда</h2>
         <ul class="team-acco">
-          <li class="team-acco__man team-acco__man--active">
+          <li class="team-acco__man">
             <div class="team-acco__img">
               <img src="./img/team/boris.png" alt=" фото Бориса" class="team-acco__photo">
             </div>

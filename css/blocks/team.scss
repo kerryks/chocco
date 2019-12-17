@@ -18,6 +18,7 @@
       height: 30.062rem;
       bottom: 76%;
     }
+
     @include phones {
       bottom: 71%;
     }
@@ -33,6 +34,7 @@
     position: absolute;
     right: 0%;
     bottom: 95%;
+
     @include tablets {
       width: 6.375rem;
       height: 5.312rem;
@@ -60,6 +62,7 @@
     padding: 0;
     margin-top: 4%;
   }
+
   @include phones {
     z-index: 2;
   }
@@ -95,12 +98,6 @@
   @include phones {
     width: 45%;
   }
-
-}
-
-.team-acco__man--active .team-acco__content {
-  display: flex;
-}
 
 .team-acco__img {
   margin-bottom: rem(25px);
@@ -146,20 +143,20 @@
     margin-left: rem(7px);
     margin-bottom: rem(-10px);
   }
+
   @include phones {
     font-size: 1.212rem;
   }
 }
 
 .team-acco__content {
-  display: none;
+  display: flex;
+  height: 0;
+  overflow: hidden;
+  transition: height 0.5s;
   flex-flow: column;
   align-items: center;
   width: 80%;
-
-  @include tablets {
-
-  }
 
   @include phones {
     width: 90%;
