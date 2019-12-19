@@ -1,0 +1,42 @@
+.modal-win {
+  background-color: $bg-overlay;
+  opacity: 0.99;
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  height: 100%;
+  transition: all ease 1s;
+  display: none;
+}
+
+
+.modal-win__close {
+  position: fixed;
+  width: 1.5rem;
+  height: 1.5rem;
+  cursor: pointer;
+  z-index: 20;
+  transform: rotate(45deg);
+
+  &::before {
+    position: fixed;
+    width: 1.5rem;
+    height: 1.5rem;
+    top: 0.5rem;
+    z-index: 20;
+    transform: rotate(-45deg);
+  }
+}
+  .close{
+    position: absolute;
+    padding: rem(20px) rem(35px);
+    border-radius: rem(45px);
+    background-color: $green;
+    text-transform: uppercase;
+    color: $white;
+    font-size: rem(19px);
+    font-weight: 600;
+    outline: none;
+    z-index: 3;
+  }

@@ -47,7 +47,6 @@
   display: flex;
   flex-flow: column;
   align-items: center;
-  justify-content: center;
 
   @include tablets {
     justify-content: flex-start;
@@ -66,7 +65,6 @@
   @include phones {
     z-index: 2;
   }
-
 }
 
 .team-acco {
@@ -98,10 +96,10 @@
   @include phones {
     width: 45%;
   }
+}
 
 .team-acco__img {
   margin-bottom: rem(25px);
-
 
   @include tablets {
     padding: 1rem;
@@ -160,7 +158,6 @@
 
   @include phones {
     width: 90%;
-
   }
 }
 

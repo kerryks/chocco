@@ -319,6 +319,7 @@
             </div>
 
           </li>
+
         </ul>
         <a href="#" class="slider__btn slider__btn--right" id="right">
           <svg class="slider__arrow slider__arrow--right">
@@ -424,9 +425,9 @@
     <section class="section reviews">
       <div class="container reviews__container">
         <h2 class="reviews__head">Отзывы</h2>
-        <div class="reviews__main">
-          <div class="reviews__item">
-            <img src="./img/reviews/main_photo.png" alt="Фото" class="reviews__pic">
+        <ul class="reviews__main">
+          <li class="reviews__item is-active">
+            <img src="./img/reviews/people/alyona.png" alt="Фото" class="reviews__pic">
             <div class="reviews__desc">
               <div class="reviews__title">Лучший перекус</div>
               <p class="reviews__text">Я ем малыми порциями, но часто. Это повышает мою продуктивность в разы. В течение
@@ -436,19 +437,38 @@
                 Это приятно
                 и удобно.
               </p>
-              <div class="reviews__name"> Алёна Хмельницкая</div>
+              <div class="reviews__name">Алёна Хмельницкая</div>
             </div>
-          </div>
-        </div>
+          </li>
+          <li class="reviews__item">
+            <img src="./img/reviews/people/mariya.png" alt="Фото" class="reviews__pic">
+            <div class="reviews__desc">
+              <div class="reviews__title">Лучшие батончики премиум уровня</div>
+              <p class="reviews__text">Батончики понравились. На мой взгляд слегка завышена цена по сравнению с конкурентами, однако, как говорится – оно того стоит. Нравится носить с собой, нравится держать в руке. Ну и конечно же, кушать. Идеально утоляют голод, хоть и не надолго. Через час уже ем ещё один. Но это скорее плюс, чем минус.
+              </p>
+              <div class="reviews__name">Мария Орлова</div>
+            </div>
+          </li>
+          <li class="reviews__item">
+            <img src="./img/reviews/people/vadim.png" alt="Фото" class="reviews__pic">
+            <div class="reviews__desc">
+              <div class="reviews__title">Идеально подходят для спортсменов</div>
+              <p class="reviews__text">После тренировок всегда хочется быстро закинуться чем-то белковым, потому что до дома ещё нужно доехать. А кушать хочется. Протеиновые батончики всегда выручают в этом плане. Спасибо производителю за этот качественный и экологичный продукт. 
+              </p>
+              <div class="reviews__name">Вадим Грачев
+              </div>
+            </div>
+          </li>
+        </ul>
         <ul class="reviews__list">
-          <li class="reviews__img reviews__img_active">
-            <img src="./img/reviews/people/maingirl.png" alt="фото" class="reviews__img--list">
+          <li class="reviews__img is-active">
+            <img src="./img/reviews/prew-people/maingirl.png" alt="фото" class="reviews__img--list">
           </li>
           <li class="reviews__img">
-            <img src="./img/reviews/people/girl.png" alt="фото" class="reviews__img--list">
+            <img src="./img/reviews/prew-people/girl.png" alt="фото" class="reviews__img--list">
           </li>
           <li class="reviews__img">
-            <img src="./img/reviews/people/man.png" alt="фото" class="reviews__img--list">
+            <img src="./img/reviews/prew-people/man.png" alt="фото" class="reviews__img--list">
           </li>
         </ul>
       </div>
@@ -532,14 +552,12 @@
                 </label>
               </div>
               <div class="form__btn">
-                <button class="btn btn--sub" type="submit">Заказать</button>
+                <button class="btn btn--sub" id="openOverlay" type="submit">Заказать</button>
                 <button class="btn btn--res" type="reset">Очистить</button>
               </div>
             </div>
-
           </div>
         </form>
-
       </div>
     </section>
 
@@ -648,8 +666,12 @@
             <a href="#" class="overlay-menu__link">контакты</a>
           </li>
         </ul>
+      </nav>
     </div>
-    </nav>
+    <div class="modal-win" id="modal">
+      <div class="modal-win__inner">
+      </div>
+    </div>
   </div>
   <script src="./js/index.js"></script>
 </body>

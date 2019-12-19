@@ -27,7 +27,7 @@
   align-items: center;
   position: absolute;
   height: 9rem;
-  z-index: 3;
+  z-index: 5;
 }
 
 .slider__btn--left {
@@ -75,18 +75,24 @@
 
 .slider__list {
   display: flex;
-  justify-content: center;
+  width: 100%;
+  position: relative;
+  right: 0;
+  transition: right 0.4s;
+  height: 34rem;
+  align-items: center;
 }
 
 .slider__item {
   display: flex;
   position: relative;
   width: 100%;
+  flex-shrink: 0;
+  z-index: 3;
 
   @include tablets {
     flex-flow: column;
     align-items: center;
-    width: 90%;
   }
 }
 
@@ -123,11 +129,11 @@
     content: "";
     background: url(../img/slider/sheet1.png) no-repeat;
     background-size: contain;
-    width: 4.687rem;
-    height: 5.75rem;
+    width: 4.4rem;
+    height: 5rem;
     position: absolute;
-    left: -5%;
-    bottom: 61%;
+    left: 0%;
+    bottom: 64%;
 
     @include tablets {
       left: 15%;
