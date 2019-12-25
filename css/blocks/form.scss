@@ -43,11 +43,11 @@
 }
 
 .form__input--big {
-  height: 100%;
-  padding-bottom: 30%;
+  height: 12.5rem;
+  resize: none;
 
   @include phones-small {
-    padding: 10%;
+    height: 7.5rem;
   }
 }
 
@@ -155,4 +155,9 @@
   @include phones-small {
     margin-top: 3%;
   }
+}
+
+.error {
+  font-size: 12;
+  color: $black;
 }

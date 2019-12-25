@@ -4,36 +4,88 @@
 
 // меню для тел и гамбургер меню
 
-const button = document.querySelector('#ham-menu');
-const menu = document.querySelector('#menu');
-const body = document.querySelector('body');
-function toggleMenu() {
-  button.classList.toggle('hamburger-menu--active');
-  menu.classList.toggle('overlay-menu__wrap--active');
-  body.classList.toggle('menu-open');
-}
-button.addEventListener('click', toggleMenu);
+// const button = document.querySelector('#ham-menu');
+// const menu = document.querySelector('#menu');
+// const body = document.querySelector('body');
+// function toggleMenu() {
+//   button.classList.toggle('hamburger-menu--active');
+//   menu.classList.toggle('overlay-menu__wrap--active');
+//   body.classList.toggle('menu-open');
+// }
+// button.addEventListener('click', toggleMenu);
 
 //
 
-// let menuOpenBurger = (function (buttonClass, menuClass) {
-//   let button = document.querySelector(buttonClass);
-//   let menu = document.querySelector(menuClass);
-//   let body = document.querySelector('body');
-//   let _toggleMenu = function (e) {
-//     button.classList.toggle('hamburger-menu--active');
-//     menu.classList.toggle('overlay-menu__wrap--active');
-//     body.classList.toggle('menu-open');
-//   }
+let menuOpen = (function (options) {
+  let button = document.querySelector(options.button);
+  let menu = document.querySelector(options.menu);
+  let body = document.querySelector('body');
+  let _toggleMenu = function (e) {
+    button.classList.toggle('hamburger-menu--active');
+    menu.classList.toggle('overlay-menu__wrap--active');
+    body.classList.toggle('menu-open');
+  }
 
-//   let addListeners = function () {
-//     button.addEventListener('click', _toggleMenu);
-//   }
-//   return {
-//     openMenu: addListeners
-//   };
+  let addListeners = function () {
+    button.addEventListener('click', _toggleMenu);
 
-// }) ('#ham-menu','#menu')
+    menu.addEventListener('click', function (e) {
+      target = e.target;
+      if (target.className === 'overlay-menu__link') {
+        console.log(target)
+        _toggleMenu();
+      }
+    });
+  }
+  return {
+    openMenu: addListeners
+  };
+
+})({
+  button: '#ham-menu',
+  menu: '#menu'
+});
+
+menuOpen.openMenu();
+
+// слайдер
+
+
+const left = document.querySelector('#left');
+const right = document.querySelector('#right');
+const slider = document.querySelector('#slider');
+const computed = getComputedStyle(slider);
+const counterElement = document.querySelectorAll('.slider__item').length;
+const maxWidth = (counterElement - 1) * parseInt(computed.width);
+
+right.addEventListener("click", function (e) {
+  e.preventDefault();
+  let currentRight = parseInt(computed.right);
+
+  if (!currentRight) {
+    currentRight = 0;
+  }
+
+  if (currentRight < maxWidth) {
+    slider.style.right = currentRight + parseInt(computed.width) + "px";
+  }
+});
+
+left.addEventListener("click", function (e) {
+  e.preventDefault();
+
+  let currentRight = parseInt(computed.right);
+
+  if (!currentRight) {
+    currentRight = 0;
+  }
+
+  if (currentRight > 0) {
+    slider.style.right = currentRight - parseInt(computed.width) + "px";
+  }
+});
+
+
 
 // аккордеон для секции с командой
 
@@ -63,42 +115,147 @@ let teamAccoJS = () => {
 };
 teamAccoJS();
 
-// слайдер
+// аккордеон меню
 
+let verticalAcco = () => {
+  let links = document.querySelectorAll('.menu-acco__trigger');
+  let body = document.querySelector('body');
+  let button = document.querySelector('.menu-close')
 
-const left = document.querySelector('#left');
-const right = document.querySelector('#right');
-const slider = document.querySelector('#slider');
-const computed = getComputedStyle(slider);
-const counterElement = document.querySelectorAll('.slider__item').length;
-const maxWidth = (counterElement - 1) * parseInt(computed.width);
-console.log(maxWidth)
-right.addEventListener("click", function (e) {
-  e.preventDefault();
-  let currentRight = parseInt(computed.right);
-
-  if (!currentRight) {
-    currentRight = 0;
+  let calculateWidth = () => {
+    let windowWidth = window.innerWidth;
+    let linksWidth = links[0].offsetWidth;
+    let reqWidth = windowWidth - linksWidth * links.length;
+    return reqWidth > 550 ? 550 : reqWidth;
+  }
+  function closeItem(activeElement) {
+    let activeText = activeElement.querySelector('.menu-acco__content');
+    activeText.style.width = '0px';
+    activeElement.classList.remove('is-active');
   }
 
-  if (currentRight < maxWidth) {
-    slider.style.right = currentRight + parseInt(computed.width) + "px";
+  links.forEach(function (elem) {
+    elem.addEventListener('click', function (e) {
+      e.preventDefault();
+      let link = e.target;
+      let active = document.querySelector('.menu-acco__item.is-active');
+      if (active) {
+        let activeText = active.querySelector('.menu-acco__content');
+        activeText.style.width = '0px';
+        active.classList.remove('is-active');
+      }
+
+      if (!active || active.querySelector('.menu-acco__trigger') !== e.target) {
+        let current = link.closest('.menu-acco__item');
+        current.classList.add('is-active');
+        let currentText = current.querySelector('.menu-acco__content');
+        if (body.offsetWidth > 480) {
+          currentText.style.width = calculateWidth() + 'px';
+        } else {
+          currentText.style.width = '100%';
+        }
+        widthEl = calculateWidth();
+        console.log(widthEl)
+      }
+    })
+  })
+
+  document.addEventListener('click', e => {
+    let activePerson = document.querySelector('.menu-acco__item.is-active');
+    const target = e.target;
+    if (!target.closest('.menu-acco') && activePerson) {
+      closeItem(activePerson);
+      console.log(target)
+    }
+  });
+  button.addEventListener('click', e => {
+    let activePerson = document.querySelector('.menu-acco__item.is-active');
+    const target = e.target;
+    if (!target.closest('.menu-acco') && activePerson) {
+      closeItem(activePerson);
+      console.log(target)
+    }
+  });
+
+};
+verticalAcco();
+
+// аккордеон секции отзывов
+
+(function () {
+  const items = document.querySelectorAll('.reviews__item');
+  const revImg = document.querySelectorAll('.reviews__img');
+  let active = 0;
+
+  for (let i = 0; i < items.length; i++) {
+    revImg[i].addEventListener('click', function (e) {
+      e.preventDefault();
+      items[i].classList.toggle('is-active');
+      revImg[i].classList.toggle('is-active');
+      console.log(active)
+      revImg[active].classList.toggle('is-active');
+      items[active].classList.toggle('is-active');
+      active = i;
+    })
   }
-});
+}());
 
-left.addEventListener("click", function (e) {
-  e.preventDefault();
 
-  let currentRight = parseInt(computed.right);
+// отправка формы
 
-  if (!currentRight) {
-    currentRight = 0;
+const myForm = document.querySelector('#myForm');
+const send = document.querySelector('#send')
+
+// send.addEventListener('click', event => {
+//   event.preventDefault();
+
+var ajaxForm = function (form) {
+
+  let formData = new FormData();
+  formData.appendChild('name', myForm.elements.name.value);
+  formData.appendChild('phone', myForm.elements.phone.value);
+  formData.appendChild('comment', myForm.elements.comment.value);
+  formData.appendChild('to', 'kerryks@ya.ru');
+
+  let url = 'https://webdev-api.loftschool.com/sendmail/';
+
+  //   if (validateForm(myForm)) {
+  // const data = {
+  //   name:myForm.elements.name.value,
+  //   phone:myForm.elements.phone.value,
+  //   comment:myForm.elements.comment.value
+  // };
+  const xhr = new XMLHttpRequest();
+  xhr.responseType = 'json';
+  xhr.open('POST', url);
+  xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
+  xhr.send(formData);
+
+  return xhr;
+};
+
+// });
+
+function validateForm(form) {
+  let valid = true;
+
+  if (!validateFiled(form.elements.name)) {
+    valid = false;
+  }
+  if (!validateFiled(form.elements.phone)) {
+    valid = false;
+  }
+  if (!validateFiled(form.elements.comment)) {
+    valid = false;
   }
 
-  if (currentRight > 0) {
-    slider.style.right = currentRight - parseInt(computed.width) + "px";
-  }
-});
+  return valid;
+}
+
+function validateFiled(field) {
+  field.nextElementSibling.textContent = field.validationMessage
+  return field.checkValidity();
+}
 
 
 // модальное окно
@@ -175,22 +332,89 @@ const overlay = (function () {
 //   }
 // });
 
-// аккордеон секции отзывов
 
-(function () {
-  const items = document.querySelectorAll('.reviews__item');
-  const revImg = document.querySelectorAll('.reviews__img');
-  let active = 0;
+// const sections = document.querySelector('.sextion');
+// const display = document.querySelector('.wrapper')
 
-  for (let i = 0; i < items.length; i++) {
-    revImg[i].addEventListener('click', function (e) {
-      e.preventDefault();
-      items[i].classList.toggle('is-sctive');
-      revImg[i].classList.toggle('is-active');
+// $(window).on('wheel', e => {
+//   const deltaY = e.originalEvent.deltaY;
 
-      revImg[active].classList.toggle('is-active');
-      items[active].classList.toggle('is-active');
-      active = i;
-    })
+//   if (deltaY > 0) {
+//     console.log('next');
+//   }
+//   if (deltaY < 0) {
+//     console.log('prev');
+//   }
+
+// });
+
+// карта
+
+ymaps.ready(init);
+
+let placemarks = [
+  {
+    latitude: 55.75785403,
+    longitude: 37.58241240,
+    hintContent: '<div class="map__hint">Новинский бул., 31</div>',
+    balloonContent: [
+      '<div class="map__balloon">',
+      'CHOCCO',
+      '</div>'
+    ]
+  },
+  {
+    latitude: 55.74293209,
+    longitude: 37.58042220,
+    hintContent: '<div class="map__hint">Новинский бул., 31</div>',
+    balloonContent: [
+      '<div class="map__balloon">',
+      '<img class="map__img" src="" alt=""/>',
+      'CHOCCO',
+      '</div>'
+    ]
+  },
+  {
+    latitude: 55.74898385,
+    longitude: 37.60398272,
+    hintContent: '<div class="map__hint">Новинский бул., 31</div>',
+    balloonContent: [
+      '<div class="map__balloon">',
+      'CHOCCO',
+      '</div>'
+    ]
+  },
+  {
+    latitude: 55.75709173,
+    longitude: 37.61913184,
+    hintContent: '<div class="map__hint">Новинский бул., 31</div>',
+    balloonContent: [
+      '<div class="map__balloon">',
+      'CHOCCO',
+      '</div>'
+    ]
   }
-}());
+];
+
+function init() {
+  let map = new ymaps.Map('map', {
+    center: [55.74, 37.59],
+    zoom: 13,
+    controls: ['zoomControl'],
+    behaviors: ['drag'],
+  });
+
+  placemarks.forEach(function (obj) {
+    let placemark = new ymaps.Placemark([obj.latitude, obj.longitude], {
+      hintContent: obj.hintContent,
+      balloonContent: obj.balloonContent.join('')
+    },
+      {
+        iconLayout: 'default#image',
+        iconImageHref: '../img/map/logo.png',
+        iconImageSize: [46, 57],
+        iconImageOffset: [-23, -57]
+      });
+    map.geoObjects.add(placemark);
+  });
+};

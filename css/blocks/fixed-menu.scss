@@ -3,6 +3,10 @@
   top: rem(200px);
   right: rem(50px);
   z-index: 2;
+
+  @include phones {
+    display: none;
+  }
 }
 
 .fixed-menu__dot {

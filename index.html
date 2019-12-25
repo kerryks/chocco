@@ -319,7 +319,91 @@
             </div>
 
           </li>
+          <li class="slider__item">
+            <div class="slider__left">
+              <img src="./img/slider/bars.png" alt="" class="slider__pic">
+            </div>
+            <div class="slider__right">
+              <div class="slider__head">Батончик “Морские водоросли”</div>
+              <p class="slider__text">Гранола из морских водорослей с овсом, миндалем и тыквенными семечками. В состав
+                также входят: сухое молоко, заменитель сахара и какао бобы.</p>
 
+              <div class="slider__desc">
+                <div class="slider__cat">
+                  <div class="slider__cat-text">Калорийность</div>
+                  <div class="slider__cat-desc">120 ккал</div>
+                </div>
+                <div class="slider__cat">
+                  <div class="slider__cat-text">Вес</div>
+                  <div class="slider__cat-desc">98 грамм</div>
+                </div>
+              </div>
+              <div class="slider__options">
+                <div class="slider__price">140 ₽</div>
+                <button class="btn btn--sub btn--phone" type="submit">Заказать</button>
+              </div>
+            </div>
+            <div class="ingredient">
+              <svg class="ingredient__pic">
+                <use xlink:href="./img/sprite/sprite.svg#chocco-bar"></use>
+              </svg>
+              <div class="ingredient__text">состав</div>
+              <div class="ingredient__dropdown">
+                <ul class="dropdown__list">
+                  <li class="dropdown__item">
+                    <svg class="dropdown__pic">
+                      <use xlink:href="./img/sprite/sprite.svg#oat"></use>
+                    </svg>
+                    <div class="dropdown__text">Овес</div>
+                    <div class="dropdown__heft">25г</div>
+                  </li>
+                  <li class="dropdown__item">
+                    <svg class="dropdown__pic">
+                      <use xlink:href="./img/sprite/sprite.svg#seaweed"></use>
+                    </svg>
+                    <div class="dropdown__text">Мор. водоросли</div>
+                    <div class="dropdown__heft">15г</div>
+                  </li>
+                  <li class="dropdown__item">
+                    <svg class="dropdown__pic">
+                      <use xlink:href="./img/sprite/sprite.svg#almond"></use>
+                    </svg>
+                    <div class="dropdown__text">Миндаль</div>
+                    <div class="dropdown__heft">20г</div>
+                  </li>
+                  <li class="dropdown__item">
+                    <svg class="dropdown__pic">
+                      <use xlink:href="./img/sprite/sprite.svg#washing-powder"></use>
+                    </svg>
+                    <div class="dropdown__text">Сухое молоко</div>
+                    <div class="dropdown__heft">10г</div>
+                  </li>
+                  <li class="dropdown__item">
+                    <svg class="dropdown__pic">
+                      <use xlink:href="./img/sprite/sprite.svg#seeds"></use>
+                    </svg>
+                    <div class="dropdown__text">Тыкв. семечки</div>
+                    <div class="dropdown__heft">10г</div>
+                  </li>
+                  <li class="dropdown__item">
+                    <svg class="dropdown__pic">
+                      <use xlink:href="./img/sprite/sprite.svg#apitherapy"></use>
+                    </svg>
+                    <div class="dropdown__text">Зам. сахара</div>
+                    <div class="dropdown__heft">4г</div>
+                  </li>
+                  <li class="dropdown__item">
+                    <svg class="dropdown__pic">
+                      <use xlink:href="./img/sprite/sprite.svg#beans"></use>
+                    </svg>
+                    <div class="dropdown__text">Какао бобы</div>
+                    <div class="dropdown__heft">4г</div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+          </li>
         </ul>
         <a href="#" class="slider__btn slider__btn--right" id="right">
           <svg class="slider__arrow slider__arrow--right">
@@ -378,9 +462,13 @@
     </section>
 
     <section class=" section menu">
+      <div class="menu-close">
+        <span class="menu-close__line menu-close__line--top"></span>
+        <span class="menu-close__line menu-close__line--middle"></span>
+      </div>
       <h2 class="menu__title">меню</h2>
       <ul class="menu-acco">
-        <li class="menu-acco__item menu-acco__item--active">
+        <li class="menu-acco__item">
           <a href="#" class="menu-acco__trigger" style="background-image: url('./img/menu/milk.png');">
             <div class="menu-acco__head menu-acco__head--milk">Батончики с молоком</div>
           </a>
@@ -444,7 +532,10 @@
             <img src="./img/reviews/people/mariya.png" alt="Фото" class="reviews__pic">
             <div class="reviews__desc">
               <div class="reviews__title">Лучшие батончики премиум уровня</div>
-              <p class="reviews__text">Батончики понравились. На мой взгляд слегка завышена цена по сравнению с конкурентами, однако, как говорится – оно того стоит. Нравится носить с собой, нравится держать в руке. Ну и конечно же, кушать. Идеально утоляют голод, хоть и не надолго. Через час уже ем ещё один. Но это скорее плюс, чем минус.
+              <p class="reviews__text">Батончики понравились. На мой взгляд слегка завышена цена по сравнению с
+                конкурентами, однако, как говорится – оно того стоит. Нравится носить с собой, нравится держать в руке.
+                Ну и конечно же, кушать. Идеально утоляют голод, хоть и не надолго. Через час уже ем ещё один. Но это
+                скорее плюс, чем минус.
               </p>
               <div class="reviews__name">Мария Орлова</div>
             </div>
@@ -453,7 +544,9 @@
             <img src="./img/reviews/people/vadim.png" alt="Фото" class="reviews__pic">
             <div class="reviews__desc">
               <div class="reviews__title">Идеально подходят для спортсменов</div>
-              <p class="reviews__text">После тренировок всегда хочется быстро закинуться чем-то белковым, потому что до дома ещё нужно доехать. А кушать хочется. Протеиновые батончики всегда выручают в этом плане. Спасибо производителю за этот качественный и экологичный продукт. 
+              <p class="reviews__text">После тренировок всегда хочется быстро закинуться чем-то белковым, потому что до
+                дома ещё нужно доехать. А кушать хочется. Протеиновые батончики всегда выручают в этом плане. Спасибо
+                производителю за этот качественный и экологичный продукт.
               </p>
               <div class="reviews__name">Вадим Грачев
               </div>
@@ -473,22 +566,27 @@
         </ul>
       </div>
     </section>
+    <section class="section video">
+
+    </section>
 
     <section class="section order">
       <div class="order__container">
         <h2 class="order__title">Закажите доставку</h2>
-        <form class="form" action="">
+        <form class="form" id="myForm" action="https://webdev-api.loftschool.com" method="post">
           <div class="form__container">
             <div class="form__col">
               <div class="form__row">
                 <label class="form__label">
                   <div class="form__title">Имя
-                    <input class="form__input" type="text">
+                    <input class="form__input" placeholder="Ваше имя" name="name" type="text" required>
+                    <div class="error"></div>
                   </div>
                 </label>
                 <label class="form__label">
                   <div class="form__title">Телефон
-                    <input class="form__input" type="text">
+                    <input class="form__input" placeholder="89112121212" name="phone" type="text" required>
+                    <div class="error"></div>
                   </div>
                 </label>
               </div>
@@ -526,7 +624,8 @@
               <div class="form__row">
                 <label class="form__label">
                   <div class="form__title">Комментарий
-                    <input class="form__input form__input--big" type="text">
+                    <textarea class="form__input form__input--big" placeholder="Комментарий" name="comment" type="text" required></textarea>
+                    <div class="error"></div>
                   </div>
                 </label>
               </div>
@@ -552,7 +651,7 @@
                 </label>
               </div>
               <div class="form__btn">
-                <button class="btn btn--sub" id="openOverlay" type="submit">Заказать</button>
+                <button class="btn btn--sub" id="send" type="submit">Заказать</button>
                 <button class="btn btn--res" type="reset">Очистить</button>
               </div>
             </div>
@@ -562,9 +661,7 @@
     </section>
 
     <section class="section map">
-      <div class="map__img">
-        <img src="./img/map/map.png" alt="карта" class="map__pic">
-      </div>
+      <div id="map" class="map"></div>
       <footer class="container footer__container">
         <div class="footer__left">
           <div class="footer__address">Москва, ул.Новый Арбат, д.31/12</div>
@@ -659,10 +756,10 @@
           <li class="overlay-menu__item">
             <a href="#" class="overlay-menu__link">отзывы</a>
           </li>
-          <li class="nav__item">
+          <li class="overlay-menu__item">
             <a href="#" class="overlay-menu__link">как мы работаем</a>
           </li>
-          <li class="nav__item">
+          <li class="overlay-menu__item">
             <a href="#" class="overlay-menu__link">контакты</a>
           </li>
         </ul>
@@ -673,6 +770,8 @@
       </div>
     </div>
   </div>
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript">
+	</script>
   <script src="./js/index.js"></script>
 </body>
 

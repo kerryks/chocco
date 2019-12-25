@@ -46,8 +46,11 @@
     margin-bottom: 2.375rem;
   }
 
+  @include phones {
+    margin-bottom: 0.2rem;
+  }
+
   @include phones-small {
-    margin-bottom: 1.875rem;
     font-size: 2.3rem;
   }
 }

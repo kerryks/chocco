@@ -8,6 +8,7 @@
   height: 100%;
   transition: all ease 1s;
   display: none;
+
 }
 
 .overlay-menu__wrap--active {
@@ -43,6 +44,6 @@
   }
 }
 
-.overlay-menu__link:first-letter {
+.overlay-menu__item:first-letter {
   text-transform: uppercase;
 }
