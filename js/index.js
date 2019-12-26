@@ -16,6 +16,90 @@
 
 //
 
+const sections = $('.section');
+const display = $('.maincontent');
+let inScroll = false;
+
+const perfomTransition = sectionEq => {
+  if (inScroll === false) {
+    inScroll = true;
+    const position = sectionEq * -100;
+
+    sections
+      .eq(sectionEq)
+      .addClass('active')
+      .siblings()
+      .removeClass('active');
+
+    display.css({
+      transform: `translateY(${position}%)`
+    });
+
+    setTimeout(() => {
+      inScroll = false;
+
+      $('.fixed-menu__item')
+        .eq(sectionEq)
+        .addClass('active')
+        .siblings()
+        .removeClass('active');
+    }, 1300);
+  }
+};
+
+const scrollToSection = direction => {
+  const activeSection = sections.filter('.active');
+  const nextSection = activeSection.next();
+  const prevSection = activeSection.prev();
+
+  if (direction === 'next' && nextSection.length) {
+    perfomTransition(nextSection.index())
+  }
+
+  if (direction === 'next' && prevSection.length) {
+    perfomTransition(prevSection.index())
+  }
+
+  $(window).on('wheel', e => {
+    const deltaY = e.originalEvent.deltaY
+
+    if (deltaY > 0) {
+      scrollToSection('next');
+    }
+
+    if (deltaY < 0) {
+      scrollToSection('prev');
+    }
+  });
+};
+
+$(window).on('keydown', e => {
+  const tagName = e.target.tagName.toLowerCase();
+
+  if (tagName != 'input' || tagName != 'texterea') {
+
+    switch (e.keyCode) {
+      case 38:
+        scrollToSection('prev');
+        break;
+      case 40:
+        scrollToSection('next');
+        break;
+    }
+  }
+});
+
+$('[data-scroll-to').on('click', e => {
+  e.preventDefault();
+
+  const $this = $(e.currentTarget);
+  const target = $this.attr('data-scroll-to');
+
+  perfomTransition(target);
+});
+
+//меню телефон
+
 let menuOpen = (function (options) {
   let button = document.querySelector(options.button);
   let menu = document.querySelector(options.menu);
@@ -221,7 +305,7 @@ var ajaxForm = function (form) {
 
   //   if (validateForm(myForm)) {
   // const data = {
-  //   name:myForm.elements.name.value,
+  //   name:myForm.elements.nxame.value,
   //   phone:myForm.elements.phone.value,
   //   comment:myForm.elements.comment.value
   // };
@@ -395,6 +479,7 @@ let placemarks = [
     ]
   }
 ];
+geoObjects = [];
 
 function init() {
   let map = new ymaps.Map('map', {
@@ -404,17 +489,31 @@ function init() {
     behaviors: ['drag'],
   });
 
-  placemarks.forEach(function (obj) {
-    let placemark = new ymaps.Placemark([obj.latitude, obj.longitude], {
-      hintContent: obj.hintContent,
-      balloonContent: obj.balloonContent.join('')
-    },
+  for (let i = 0; i < placemarks.length; i++) {
+    geoObjects[i] = new ymaps.Placemark([placemarks[i].latitude, placemarks[i].longitude],
+      {
+        hintContent: placemarks[i].hintContent,
+        balloonContent: placemarks[i].balloonContent.join('')
+      },
       {
         iconLayout: 'default#image',
         iconImageHref: '../img/map/logo.png',
         iconImageSize: [46, 57],
         iconImageOffset: [-23, -57]
       });
-    map.geoObjects.add(placemark);
+  }
+
+  let clusterer = new ymaps.Clusterer({
+    clusterIcons: [
+      {
+        href: '../img/map/logo.png',
+        size: [100, 100],
+        offset: [-50, -50]
+      }
+    ],
+    clusterIconContentLayout: null
   });
+
+  map.geoObjects.add(clusterer);
+  clusterer.add(geoObjects);
 };
