@@ -52,9 +52,15 @@
 
 .reviews__head {
   margin-bottom: rem(40px);
+  margin-top: 6%;
+
+  @include tablets {
+    margin-top: 0;
+  }
 
   @include phones-small {
     margin-bottom: 0.5rem;
+
   }
 }
 

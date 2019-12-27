@@ -47,6 +47,7 @@
   display: flex;
   flex-flow: column;
   align-items: center;
+  height: 100%;
 
   @include tablets {
     justify-content: flex-start;

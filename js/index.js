@@ -20,72 +20,86 @@ const sections = $('.section');
 const display = $('.maincontent');
 let inScroll = false;
 
-const perfomTransition = sectionEq => {
-  if (inScroll === false) {
-    inScroll = true;
-    const position = sectionEq * -100;
+const mb = new MobileDetect(window.navigator.userAgent);
+const isMobile = mb.mobile();
 
-    sections
-      .eq(sectionEq)
-      .addClass('active')
-      .siblings()
-      .removeClass('active');
-
-    display.css({
-      transform: `translateY(${position}%)`
-    });
-
-    setTimeout(() => {
-      inScroll = false;
-
-      $('.fixed-menu__item')
-        .eq(sectionEq)
-        .addClass('active')
-        .siblings()
-        .removeClass('active');
-    }, 1300);
-  }
+const changeFixedMenuActiveItem = () => {
+  $('.fixed-menu__item')
+    .eq(sectionEq)
+    .addClass('active')
+    .siblings()
+    .removeClass('active');
 };
 
-const scrollToSection = direction => {
+const perfomTransition = sectionEq => {
+  if (inScroll) return;
+  inScroll = true;
+
+  const transitionIsOver = 1000;
+  const mouseInertionIsOver = 300;
+  const position = sectionEq * -100;
+
+  if (isNaN(position)) console.error('передано не верное значение в perfomTransition')
+
+  sections
+    .eq(sectionEq)
+    .addClass('active')
+    .siblings()
+    .removeClass('active');
+
+  display.css({
+    transform: `translateY(${position}%)`
+  });
+
+  setTimeout(() => {
+    inScroll = false;
+    changeFixedMenuActiveItem();
+  }, transitionIsOver + mouseInertionIsOver);
+};
+
+
+
+const scroller = () => {
   const activeSection = sections.filter('.active');
   const nextSection = activeSection.next();
   const prevSection = activeSection.prev();
 
-  if (direction === 'next' && nextSection.length) {
-    perfomTransition(nextSection.index())
-  }
-
-  if (direction === 'next' && prevSection.length) {
-    perfomTransition(prevSection.index())
+  return {
+    next() {
+      if (nextSection.length) perfomTransition(nextSection.index());
+    },
+    prev() {
+      if (prevSection.length) perfomTransition(prevSection.index());
+    }
   }
 
   $(window).on('wheel', e => {
     const deltaY = e.originalEvent.deltaY
 
     if (deltaY > 0) {
-      scrollToSection('next');
+      scroller('next');
     }
 
     if (deltaY < 0) {
-      scrollToSection('prev');
+      scroller('prev');
     }
   });
 };
 
 $(window).on('keydown', e => {
   const tagName = e.target.tagName.toLowerCase();
+  const userTypingInInputs = tagName === 'input' || tagName === 'texterea';
+  const windowScroller = scroller
 
-  if (tagName != 'input' || tagName != 'texterea') {
+  if (userTypingInInputs) return
 
-    switch (e.keyCode) {
-      case 38:
-        scrollToSection('prev');
-        break;
-      case 40:
-        scrollToSection('next');
-        break;
-    }
+  switch (e.keyCode) {
+    case 38:
+      windowScroller.prev()
+      break;
+    case 40:
+      windowScroller.next()
+      break;
   }
 });
 
@@ -97,6 +111,30 @@ $('[data-scroll-to').on('click', e => {
 
   perfomTransition(target);
 });
+
+if (isMobile) {
+  window.addEventListener(
+    "touchmove",
+    e => {
+      e.preventDefault();
+    },
+    { passive: false }
+  );
+
+  $("body").swipe({
+    swipe: function (
+      event,
+      direction,
+      distance,
+      duration,
+      fingerCount,
+      fingerData
+    ) {
+      let scrollDirecrion = direction === 'up' ? 'next' : 'prev';
+      scrollToSection(scrollDirecrion);
+    }
+  });
+}
 
 //меню телефон
 
@@ -284,6 +322,96 @@ verticalAcco();
   }
 }());
 
+// плеер
+
+let video;
+let durationControl;
+let soundControl;
+let intervalId;
+
+$().ready(function () {
+
+  video = document.getElementById('player');
+
+  video.addEventListener('click', playStop);
+
+  let playButtons = document.querySelectorAll('.play');
+  for (let i = 0; i < playButtons.length; i++) {
+    playButtons[i].addEventListener('click', playStop);
+  }
+
+  let micControls = document.getElementById('mic');
+  micControls.addEventListener('click', soundOf);
+
+  durationControl = document.getElementById('durationLevel');
+  durationControl.addEventListener('mousedown', stopInterval);
+  durationControl.addEventListener('mouseup', setVideoDuration);
+
+  durationControl.min = 0;
+  durationControl.value = 0;
+
+  soundControl = document.getElementById('micLevel');
+  soundControl.addEventListener('mouseup', changeSoundVolume);
+
+  soundControl.min = 0;
+  soundControl.max = 10
+
+  video.addEventListener('ended', function () {
+    document.querySelector('.video__player-img').classList.toggle('video__player-img--active');
+    video.currentTime = 0;
+
+  }, false);
+});
+
+function playStop() {
+
+  document.querySelector('.video__player-img').classList.toggle('video__player-img--active');
+  durationControl.max = video.duration;
+
+  if (video.paused) {
+    video.play();
+    intervalId = setInterval(updateDuration, 1000 / 66);
+
+  } else {
+    // video.pause();
+    // clearInterval(intervalId);
+    stopInterval();
+  }
+};
+
+function stopInterval() {
+  video.pause();
+  clearInterval(intervalId);
+};
+
+function setVideoDuration() {
+  video.currentTime = durationControl.value;
+  intervalId = setInterval(updateDuration, 1000 / 66);
+
+  if (video.paused) {
+    video.play();
+    document.getElementsByClassName('video__player-img')[0].classList.add('video__player-img--active');
+  }
+};
+
+function updateDuration() {
+  durationControl.value = video.currentTime;
+};
+
+function soundOf() {
+  if (video.volume === 0) {
+    video.volume = soundLevel;
+    soundControl.value = soundLevel * 10;
+  } else {
+    soundLevel = video.volume;
+    video.volume = 0;
+    soundControl.value = 0;
+  }
+};
+
+function changeSoundVolume(){
+  video.volume = soundControl.value/10;
+}
 
 // отправка формы
 

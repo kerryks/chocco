@@ -24,22 +24,22 @@
                 <a href="#" class="nav__link" data-scroll-to="0">о нас</a>
               </li>
               <li class="nav__item">
-                <a href="#" class="nav__link"data-scroll-to="1">батончики</a>
+                <a href="#" class="nav__link" data-scroll-to="1">батончики</a>
               </li>
               <li class="nav__item">
-                <a href="#" class="nav__link"data-scroll-to="2">команда</a>
+                <a href="#" class="nav__link" data-scroll-to="2">команда</a>
               </li>
               <li class="nav__item">
-                <a href="#" class="nav__link"data-scroll-to="3">меню</a>
+                <a href="#" class="nav__link" data-scroll-to="3">меню</a>
               </li>
               <li class="nav__item">
-                <a href="#" class="nav__link"data-scroll-to="4">отзывы</a>
+                <a href="#" class="nav__link" data-scroll-to="4">отзывы</a>
               </li>
               <li class="nav__item">
-                <a href="#" class="nav__link"data-scroll-to="5">как мы работаем</a>
+                <a href="#" class="nav__link" data-scroll-to="5">как мы работаем</a>
               </li>
               <li class="nav__item">
-                <a href="#" class="nav__link"data-scroll-to="8">контакты</a>
+                <a href="#" class="nav__link" data-scroll-to="8">контакты</a>
               </li>
             </ul>
           </nav>
@@ -572,8 +572,27 @@
           </ul>
         </div>
       </section>
-      <section class="section video">
 
+      <section class="section video">
+        <div class="container video__container">
+          <h2 class="video__title">Как мы работаем</h2>
+          <div class="video__player">
+            <video id="player" poster="./img/video/poster.png">
+              <source src="./img/video/videoplayback.mp4" type="video/mp4">
+            </video>
+            <img src="./img/video/Play_white.png" class="play video__player-img" alt="">
+          </div>
+          <div class="video__toolbar">
+            <div class="duration">
+              <img src="./img/video/Play_gray.png" class="play duration__img">
+              <input type="range" class="duration__length" id="durationLevel">
+            </div>
+            <div class="sound">
+              <img src="./img/video/Volum_gray.png" class="sound__mic" id="mic" alt="">
+             <input type="range" class="duration__length duration__length--other" id="micLevel">
+            </div>
+          </div>
+        </div>
       </section>
 
       <section class="section order">
@@ -714,31 +733,31 @@
     </div>
     <ul class="fixed-menu">
       <li class="fixed-menu__item">
-        <a class="fixed-menu__dot fixed-menu__dot--active" href="#" aria-label="о нас" data-scroll-to="0"></a>
+        <a class="fixed-menu__dot" href="#" aria-label="о нас" data-scroll-to="0"></a>
       </li>
       <li class="fixed-menu__item">
-        <a class="fixed-menu__dot" href="#" aria-label="батончики" data-scroll-to="1"></a>
+        <a class="fixed-menu__dot" href="#" aria-label="почему CHOCCO" data-scroll-to="1"></a>
       </li>
       <li class="fixed-menu__item">
-        <a class="fixed-menu__dot" href="#" aria-label="команда"data-scroll-to="2"></a>
+        <a class="fixed-menu__dot" href="#" aria-label="батончики" data-scroll-to="2"></a>
       </li>
       <li class="fixed-menu__item">
-        <a class="fixed-menu__dot" href="#" aria-label="меню" data-scroll-to="3"></a>
+        <a class="fixed-menu__dot" href="#" aria-label="команда" data-scroll-to="3"></a>
       </li>
       <li class="fixed-menu__item">
-        <a class="fixed-menu__dot" href="#" aria-label="отзывы" data-scroll-to="4"></a>
+        <a class="fixed-menu__dot" href="#" aria-label="меню" data-scroll-to="4"></a>
       </li>
       <li class="fixed-menu__item">
-        <a class="fixed-menu__dot" href="#" aria-label="как мы работаем" data-scroll-to="5"></a>
+        <a class="fixed-menu__dot" href="#" aria-label="отзывы" data-scroll-to="5"></a>
       </li>
       <li class="fixed-menu__item">
-        <a class="fixed-menu__dot" href="#" aria-label="контакты" data-scroll-to="6"></a>
+        <a class="fixed-menu__dot" href="#" aria-label="как мы работаем" data-scroll-to="6"></a>
       </li>
       <li class="fixed-menu__item">
         <a class="fixed-menu__dot" href="#" aria-label="заказать доставку" data-scroll-to="7"></a>
       </li>
       <li class="fixed-menu__item">
-        <a class="fixed-menu__dot" href="#" aria-label="карта" data-scroll-to="8"></a>
+        <a class="fixed-menu__dot" href="#" aria-label="контакты" data-scroll-to="8"></a>
       </li>
     </ul>
     <div class="hamburger-menu" id="ham-menu">
@@ -750,25 +769,25 @@
       <nav class="overlay-menu">
         <ul class="overlay-menu__list">
           <li class="overlay-menu__item">
-            <a href="#" class="overlay-menu__link">о нас</a>
+            <a href="#" class="overlay-menu__link" data-scroll-to="0">о нас</a>
           </li>
           <li class="overlay-menu__item">
-            <a href="#" class="overlay-menu__link">батончики</a>
+            <a href="#" class="overlay-menu__link" data-scroll-to="2">батончики</a>
           </li>
           <li class="overlay-menu__item">
-            <a href="#" class="overlay-menu__link">команда</a>
+            <a href="#" class="overlay-menu__link" data-scroll-to="3">команда</a>
           </li>
           <li class="overlay-menu__item">
-            <a href="#" class="overlay-menu__link">меню</a>
+            <a href="#" class="overlay-menu__link" data-scroll-to="4">меню</a>
           </li>
           <li class="overlay-menu__item">
-            <a href="#" class="overlay-menu__link">отзывы</a>
+            <a href="#" class="overlay-menu__link" data-scroll-to="5">отзывы</a>
           </li>
           <li class="overlay-menu__item">
-            <a href="#" class="overlay-menu__link">как мы работаем</a>
+            <a href="#" class="overlay-menu__link" data-scroll-to="6">как мы работаем</a>
           </li>
           <li class="overlay-menu__item">
-            <a href="#" class="overlay-menu__link">контакты</a>
+            <a href="#" class="overlay-menu__link" data-scroll-to="8">контакты</a>
           </li>
         </ul>
       </nav>
@@ -783,6 +802,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.18/jquery.touchSwipe.min.js"></script>
   <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript">
   </script>
+  <script src="https://www.youtube.com/iframe_api"></script>
   <script src="./js/index.js"></script>
 </body>
 
