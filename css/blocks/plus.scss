@@ -6,6 +6,11 @@
     flex-direction: column;
     align-items: center;
   }
+
+  @include phones {
+    height: 95%;
+    justify-content: space-around;
+  }
 }
 
 .plus__item {
@@ -48,7 +53,7 @@
     }
   }
   @include phones {
-    margin: 4% auto;
+    margin: 3% auto;
 
   }
 }
@@ -83,4 +88,8 @@
 .plus__text {
   font-weight: 300;
   color: $dark-grey;
+
+  @include phones {
+    font-size: 13px;
+  }
 }

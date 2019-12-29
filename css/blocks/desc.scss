@@ -5,6 +5,10 @@
     margin-top: 1rem;
     width: 90%;
   }
+
+  @include phones {
+    width: 100%;
+  }
 }
 
 .desc__list {
@@ -43,4 +47,11 @@
   stroke-width: 0.5;
   stroke-miterlimit: 10;
   margin-right: rem(12px);
+}
+
+.desc__text {
+
+  @include phones-small {
+    font-size: 12px;
+  }
 }

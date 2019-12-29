@@ -10,7 +10,7 @@
 // function toggleMenu() {
 //   button.classList.toggle('hamburger-menu--active');
 //   menu.classList.toggle('overlay-menu__wrap--active');
-//   body.classList.toggle('menu-open');
+//   body.classList.toggle('locked');
 // }
 // button.addEventListener('click', toggleMenu);
 
@@ -22,14 +22,6 @@ let inScroll = false;
 
 const mb = new MobileDetect(window.navigator.userAgent);
 const isMobile = mb.mobile();
-
-const changeFixedMenuActiveItem = () => {
-  $('.fixed-menu__item')
-    .eq(sectionEq)
-    .addClass('active')
-    .siblings()
-    .removeClass('active');
-};
 
 const perfomTransition = sectionEq => {
   if (inScroll) return;
@@ -55,15 +47,25 @@ const perfomTransition = sectionEq => {
     inScroll = false;
     changeFixedMenuActiveItem();
   }, transitionIsOver + mouseInertionIsOver);
+
+  const changeFixedMenuActiveItem = () => {
+    $('.fixed-menu__item')
+      .eq(sectionEq)
+      .addClass('active')
+      .siblings()
+      .removeClass('active');
+  };
 };
 
 
 
-const scroller = () => {
+const scroller = function () {
   const activeSection = sections.filter('.active');
   const nextSection = activeSection.next();
   const prevSection = activeSection.prev();
-
+  // console.log(activeSection);
+  // console.log(nextSection);
+  // console.log(prevSection);
   return {
     next() {
       if (nextSection.length) perfomTransition(nextSection.index());
@@ -72,19 +74,22 @@ const scroller = () => {
       if (prevSection.length) perfomTransition(prevSection.index());
     }
   }
-
-  $(window).on('wheel', e => {
-    const deltaY = e.originalEvent.deltaY
-
-    if (deltaY > 0) {
-      scroller('next');
-    }
-
-    if (deltaY < 0) {
-      scroller('prev');
-    }
-  });
 };
+
+$(window).on('wheel', e => {
+  const deltaY = e.originalEvent.deltaY
+  // console.log(deltaY);
+  // console.log(scroller);
+
+  if (deltaY > 0) {
+    scroller().next();
+  }
+
+  if (deltaY < 0) {
+    scroller().prev();
+  }
+});
+
 
 $(window).on('keydown', e => {
   const tagName = e.target.tagName.toLowerCase();
@@ -95,10 +100,10 @@ $(window).on('keydown', e => {
 
   switch (e.keyCode) {
     case 38:
-      windowScroller.prev()
+      windowScroller().prev()
       break;
     case 40:
-      windowScroller.next()
+      windowScroller().next()
       break;
   }
 });
@@ -145,7 +150,7 @@ let menuOpen = (function (options) {
   let _toggleMenu = function (e) {
     button.classList.toggle('hamburger-menu--active');
     menu.classList.toggle('overlay-menu__wrap--active');
-    body.classList.toggle('menu-open');
+    body.classList.toggle('locked');
   }
 
   let addListeners = function () {
@@ -409,68 +414,68 @@ function soundOf() {
   }
 };
 
-function changeSoundVolume(){
-  video.volume = soundControl.value/10;
+function changeSoundVolume() {
+  video.volume = soundControl.value / 10;
 }
 
 // отправка формы
 
-const myForm = document.querySelector('#myForm');
-const send = document.querySelector('#send')
+// const myForm = document.querySelector('#myForm');
+// const send = document.querySelector('#send')
 
-// send.addEventListener('click', event => {
-//   event.preventDefault();
+// // send.addEventListener('click', event => {
+// //   event.preventDefault();
 
-var ajaxForm = function (form) {
+// var ajaxForm = function (form) {
 
-  let formData = new FormData();
-  formData.appendChild('name', myForm.elements.name.value);
-  formData.appendChild('phone', myForm.elements.phone.value);
-  formData.appendChild('comment', myForm.elements.comment.value);
-  formData.appendChild('to', 'kerryks@ya.ru');
+//   let formData = new FormData();
+//   formData.appendChild('name', myForm.elements.name.value);
+//   formData.appendChild('phone', myForm.elements.phone.value);
+//   formData.appendChild('comment', myForm.elements.comment.value);
+//   formData.appendChild('to', 'kerryks@ya.ru');
 
-  let url = 'https://webdev-api.loftschool.com/sendmail/';
+//   url = 'https://webdev-api.loftschool.com/sendmail/';
 
-  //   if (validateForm(myForm)) {
-  // const data = {
-  //   name:myForm.elements.nxame.value,
-  //   phone:myForm.elements.phone.value,
-  //   comment:myForm.elements.comment.value
-  // };
-  const xhr = new XMLHttpRequest();
-  xhr.responseType = 'json';
-  xhr.open('POST', url);
-  xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
-  xhr.send(formData);
+//   //   if (validateForm(myForm)) {
+//   // const data = {
+//   //   name:myForm.elements.nxame.value,
+//   //   phone:myForm.elements.phone.value,
+//   //   comment:myForm.elements.comment.value
+//   // };
+//   const xhr = new XMLHttpRequest();
+//   xhr.responseType = 'json';
+//   xhr.open('POST', url);
+//   xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
+//   xhr.send(formData);
 
-  return xhr;
-};
+//   return xhr;
+// };
 
-// });
+// // });
 
-function validateForm(form) {
-  let valid = true;
+// function validateForm(form) {
+//   let valid = true;
 
-  if (!validateFiled(form.elements.name)) {
-    valid = false;
-  }
-  if (!validateFiled(form.elements.phone)) {
-    valid = false;
-  }
-  if (!validateFiled(form.elements.comment)) {
-    valid = false;
-  }
+//   if (!validateFiled(form.elements.name)) {
+//     valid = false;
+//   }
+//   if (!validateFiled(form.elements.phone)) {
+//     valid = false;
+//   }
+//   if (!validateFiled(form.elements.comment)) {
+//     valid = false;
+//   }
 
-  return valid;
-}
+//   return valid;
+// }
 
-function validateFiled(field) {
-  field.nextElementSibling.textContent = field.validationMessage
-  return field.checkValidity();
-}
+// function validateFiled(field) {
+//   field.nextElementSibling.textContent = field.validationMessage
+//   return field.checkValidity();
+// }
 
 
-// модальное окно
+// ajax и модальное окно
 
 
 const overlay = (function () {
@@ -487,78 +492,95 @@ const overlay = (function () {
     if (content) { // если передан необязательный параметр, то вставить содержимое в блок и добавить ссылку закрытия
       innerOverlay.innerHTML = content;
     }
+
     innerOverlay.appendChild(link);
 
     overlay.classList.add('is-active'); // добавляется класс и показывается модальное окно
     body.classList.add('locked');
 
-    link.addEventListener('click', (e) => { // обработка клика на крестик
+    link.addEventListener('click', (e) => {
       e.preventDefault();
       closeOverlay(modalId);
-    })
+    });
 
-    overlay.addEventListener('click', (e) => { // обработка клика вне модалки
+    link.addEventListener('click', (e) => {
       e.preventDefault();
       if (e.target === overlay) {
         closeOverlay(modalId);
       }
-    })
-  }
-  document.addEventListener('keydown', function (e) {
-    if (e.keycode == 27) closeOverlay(modalId) // закрытие при нажатии esc 
-  });
+    });
+
+    document.addEventListener('keydown', function (e) {
+      if (e.keyCode == 27) closeOverlay(modalId);
+    });
+  };
 
   let closeOverlay = function (modalId) {
     let overlay = document.querySelector(modalId)
+
+    overlay.classList.remove('is-active');
+    body.classList.remove('locked');
+  };
+  let setContent = function (modalId, content) {
+    let overlay = document.querySelector(modalId);
     let innerOverlay = overlay.querySelector('.modal-win__inner');
-    // здесь я должна закрыть форму
-    // if(content){
-    //   innerOverlay.innerHTML = content;
-    //   innerOverlay.appendChild(link);
-    // }
-  }
+
+    if (content) { // если передан необязательный параметр, то вставить содержимое в блок и добавить ссылку закрытия
+      innerOverlay.innerHTML = content;
+      innerOverlay.appendChild(link);
+    }
+  };
+
 
   return {
     open: openOverlay,
-    close: closeOverlay
+    close: closeOverlay,
+    setContent: setContent
   }
 })();
-//overlay.open('#modal', 'dfsfdsf')
-// const openButton = document.querySelector("#openOverlay");
-// const overlayElement = document.querySelector(".modal-win");
-// const closeElement = overlayElement.querySelector(".close");
-
-// openButton.addEventListener("click", function () {
-//   overlayElement.style.display = "flex";
-// });
 
 
-// closeElement.addEventListener("click", function (e) {
-//   e.preventDefault();
-//   overlayElement.style.display = "none";
-// });
+var ajaxForm = function (form) {
 
-// overlayElement.addEventListener("click", function (e) {
-//   if (e.target === overlayElement) {
-//     closeElement.click();
-//   }
-// });
+  var data = {
+    name: form.elements.name.value,
+    phone: form.elements.phone.value,
+    comment: form.elements.comment.value,
+    to: 'kerryks@ya.ru'
+  },
 
+    url = 'https://webdev-api.loftschool.com/sendmail/fail';
 
-// const sections = document.querySelector('.sextion');
-// const display = document.querySelector('.wrapper')
+  const xhr = new XMLHttpRequest();
+  xhr.responseType = 'json';
+  xhr.open('POST', url);
+  xhr.send(JSON.stringify(data));
 
-// $(window).on('wheel', e => {
-//   const deltaY = e.originalEvent.deltaY;
+  return xhr;
+};
 
-//   if (deltaY > 0) {
-//     console.log('next');
-//   }
-//   if (deltaY < 0) {
-//     console.log('prev');
-//   }
+let submitForm = function (e) {
+  e.preventDefault();
+  let form = e.target;
+  let request = ajaxForm(form);
 
-// });
+  request.addEventListener('load', () => {
+    if (request.status >= 400) {
+      let content = 'Ошибка соединения с сервером, попробуйте позже';
+
+      overlay.open('#modal', `${content}. Ошибка ${request.status}`)
+    } else if (request.response.status) {
+      let content = request.response.message;
+      overlay.open('#modal', content);
+    } else {
+      let content = request.response.message;
+      overlay.open('#modal', content);
+    }
+  });
+};
+
+let myForm = document.querySelector('#myForm')
+myForm.addEventListener('submit', submitForm)
 
 // карта
 

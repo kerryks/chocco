@@ -9,7 +9,11 @@
     height: 19.687rem;
     position: absolute;
     left: 0;
-    bottom: -118%;
+    bottom: -114%;
+
+    @include tablets {
+      bottom: -108%
+    }
 
     @include phones {
       display: none;
@@ -20,6 +24,8 @@
 .slider__container {
   display: flex;
   align-items: center;
+  margin: 0 auto;
+  overflow: hidden;
 }
 
 .slider__btn {
@@ -31,8 +37,9 @@
 }
 
 .slider__btn--left {
-  left: 4%;
-  top: 30%;
+  left: 0%;
+  top: 35%;
+
 
   @include tablets {
     left: 17%;
@@ -46,8 +53,8 @@
 }
 
 .slider__btn--right {
-  right: 5%;
-  top: 30%;
+  right: 0%;
+  top: 35%;
 
   @include tablets {
     right: 17%;
@@ -167,7 +174,6 @@
 
 .slider__right {
   flex: 1;
-  text-align: center;
 }
 
 .slider__head {

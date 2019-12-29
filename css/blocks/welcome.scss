@@ -6,6 +6,10 @@
   background-repeat: no-repeat;
   background-color: $blue;
 
+  @include tablets {
+    background-position: right top;
+  }
+
   &::before {
     content: "";
     background: url(../img/welcome/sheet.png) no-repeat;
@@ -14,7 +18,7 @@
     height: 7rem;
     position: absolute;
     left: 1%;
-    bottom: -5%;
+    bottom: -9%;
 
     @include tablets {
       display: none;

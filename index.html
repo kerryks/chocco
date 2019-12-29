@@ -13,44 +13,43 @@
 
   <div class="wrapper">
     <div class="maincontent">
-      <header class="header">
-        <div class="container header__container">
-          <div class="logo">
-            <img src="./img/welcome/CHO_CCO.png" alt="Лого компании" class="logo">
-          </div>
-          <nav class="nav">
-            <ul class="nav__list">
-              <li class="nav__item">
-                <a href="#" class="nav__link" data-scroll-to="0">о нас</a>
-              </li>
-              <li class="nav__item">
-                <a href="#" class="nav__link" data-scroll-to="1">батончики</a>
-              </li>
-              <li class="nav__item">
-                <a href="#" class="nav__link" data-scroll-to="2">команда</a>
-              </li>
-              <li class="nav__item">
-                <a href="#" class="nav__link" data-scroll-to="3">меню</a>
-              </li>
-              <li class="nav__item">
-                <a href="#" class="nav__link" data-scroll-to="4">отзывы</a>
-              </li>
-              <li class="nav__item">
-                <a href="#" class="nav__link" data-scroll-to="5">как мы работаем</a>
-              </li>
-              <li class="nav__item">
-                <a href="#" class="nav__link" data-scroll-to="8">контакты</a>
-              </li>
-            </ul>
-          </nav>
-          <address class="contact">
-            <a href="tel:+78009039090" class="contact__phone"> 8 800 903 90 90</a>
-          </address>
-        </div>
-      </header>
-
-      <section class="section welcome ">
+      <section class="section welcome active">
         <div class="container welcome__container">
+          <header class="header">
+            <div class="container header__container">
+              <div class="logo">
+                <img src="./img/welcome/CHO_CCO.png" alt="Лого компании" class="logo">
+              </div>
+              <nav class="nav">
+                <ul class="nav__list">
+                  <li class="nav__item">
+                    <a href="#" class="nav__link" data-scroll-to="0">о нас</a>
+                  </li>
+                  <li class="nav__item">
+                    <a href="#" class="nav__link" data-scroll-to="2">батончики</a>
+                  </li>
+                  <li class="nav__item">
+                    <a href="#" class="nav__link" data-scroll-to="3">команда</a>
+                  </li>
+                  <li class="nav__item">
+                    <a href="#" class="nav__link" data-scroll-to="4">меню</a>
+                  </li>
+                  <li class="nav__item">
+                    <a href="#" class="nav__link" data-scroll-to="5">отзывы</a>
+                  </li>
+                  <li class="nav__item">
+                    <a href="#" class="nav__link" data-scroll-to="6">как мы работаем</a>
+                  </li>
+                  <li class="nav__item">
+                    <a href="#" class="nav__link" data-scroll-to="8">контакты</a>
+                  </li>
+                </ul>
+              </nav>
+              <address class="contact">
+                <a href="tel:+78009039090" class="contact__phone"> 8 800 903 90 90</a>
+              </address>
+            </div>
+          </header>
           <div class="welcome__intro">
             <div class="intro">
               <div class="intro__head">
@@ -152,7 +151,7 @@
           <ul class="slider__list" id="slider">
             <li class="slider__item">
               <div class="slider__left">
-                <img src="./img/slider/bars.png" alt="" class="slider__pic">
+                <img src="./img/slider/bars1.png" alt="" class="slider__pic">
               </div>
               <div class="slider__right">
                 <div class="slider__head">Батончик “Морские водоросли”</div>
@@ -237,17 +236,16 @@
             </li>
             <li class="slider__item">
               <div class="slider__left">
-                <img src="./img/slider/bars.png" alt="" class="slider__pic">
+                <img src="./img/slider/bars2.png" alt="" class="slider__pic">
               </div>
               <div class="slider__right">
-                <div class="slider__head">Батончик “Морские водоросли”</div>
-                <p class="slider__text">Гранола из морских водорослей с овсом, миндалем и тыквенными семечками. В состав
-                  также входят: сухое молоко, заменитель сахара и какао бобы.</p>
+                <div class="slider__head">Батончик “Гранола виноград”</div>
+                <p class="slider__text">Гранола из винограда, грецкого ореха и кунжутных семечек. В состав также входят: сухое молоко, заменитель сахара и какао бобы.</p>
 
                 <div class="slider__desc">
                   <div class="slider__cat">
                     <div class="slider__cat-text">Калорийность</div>
-                    <div class="slider__cat-desc">120 ккал</div>
+                    <div class="slider__cat-desc">110 ккал</div>
                   </div>
                   <div class="slider__cat">
                     <div class="slider__cat-text">Вес</div>
@@ -322,7 +320,7 @@
             </li>
             <li class="slider__item">
               <div class="slider__left">
-                <img src="./img/slider/bars.png" alt="" class="slider__pic">
+                <img src="./img/slider/bars1.png" alt="" class="slider__pic">
               </div>
               <div class="slider__right">
                 <div class="slider__head">Батончик “Морские водоросли”</div>
@@ -598,7 +596,7 @@
       <section class="section order">
         <div class="order__container">
           <h2 class="order__title">Закажите доставку</h2>
-          <form class="form" id="myForm" action="https://webdev-api.loftschool.com" method="post">
+          <form class="form" id="myForm" method="post">
             <div class="form__container">
               <div class="form__col">
                 <div class="form__row">
@@ -698,28 +696,28 @@
           <div class="footer__right">
             <ul class="socials">
               <li class="socials__item">
-                <a href="//vk.com" class="socials__link" title=вконтакте>
+                <a href="//vk.com" class="socials__link" title=вконтакте target="_blank">
                   <svg class="socials__icon">
                     <use xlink:href="./img/sprite/sprite.svg#vk"></use>
                   </svg>
                 </a>
               </li>
               <li class="socials__item">
-                <a href="//vk.com" class="socials__link" title="фейсбук">
+                <a href="//facebook.com" class="socials__link" title="фейсбук" target="_blank">
                   <svg class="socials__icon">
                     <use xlink:href="./img/sprite/sprite.svg#fb"></use>
                   </svg>
                 </a>
               </li>
               <li class="socials__item">
-                <a href="//vk.com" class="socials__link" title="инстаграм">
+                <a href="//instagram.com" class="socials__link" title="инстаграм" target="_blank">
                   <svg class="socials__icon">
                     <use xlink:href="./img/sprite/sprite.svg#inst"></use>
                   </svg>
                 </a>
               </li>
               <li class="socials__item">
-                <a href="//vk.com" class="socials__link" title="твиттер">
+                <a href="//twitter.com" class="socials__link" title="твиттер" target="_blank">
                   <svg class="socials__icon">
                     <use xlink:href="./img/sprite/sprite.svg#tw"></use>
                   </svg>
@@ -732,7 +730,7 @@
       </section>
     </div>
     <ul class="fixed-menu">
-      <li class="fixed-menu__item">
+      <li class="fixed-menu__item active">
         <a class="fixed-menu__dot" href="#" aria-label="о нас" data-scroll-to="0"></a>
       </li>
       <li class="fixed-menu__item">

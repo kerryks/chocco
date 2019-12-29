@@ -4,7 +4,7 @@
   right: rem(50px);
   z-index: 2;
 
-  @include phones {
+  @include tablets {
     display: none;
   }
 }

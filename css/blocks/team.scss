@@ -10,12 +10,10 @@
     background-size: contain;
     position: absolute;
     right: 0;
-    bottom: 70%;
+    bottom: 52%;
     z-index: 0;
 
     @include tablets {
-      width: 9.687rem;
-      height: 30.062rem;
       bottom: 76%;
     }
 
@@ -33,12 +31,15 @@
     background-size: contain;
     position: absolute;
     right: 0%;
-    bottom: 95%;
+    bottom: 90%;
 
     @include tablets {
-      width: 6.375rem;
-      height: 5.312rem;
-      bottom: 95%;
+      bottom: 96%;
+    }
+
+    @include phones-small {
+      width: 7rem;
+      height: 6rem;
     }
   }
 }

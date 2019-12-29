@@ -37,7 +37,7 @@
   z-index: 20;
 
   @include tablets {
-    display: block;
+    display: none;
     right: 28%;
     top: 4%;
   }
@@ -102,7 +102,7 @@
 .menu-acco__item.is-active .menu-acco__content {
   width: 34.37rem;
   padding: 3.125rem 7.8rem 0 1.687rem;
-  transition: width 0.4s, color .4s .3s;
+  transition: width 0.6s, color .5s .4s;
 
 
   @include tablets {
