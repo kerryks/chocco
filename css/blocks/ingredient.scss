@@ -1,0 +1,60 @@
+.ingredient {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 2;
+  background-color: $dark-blue;
+  border-radius: 5%;
+  width: 5.625rem;
+  height: 5.625rem;
+  right: 40%;
+  top: -2.312rem;
+
+  &:hover {
+    background-color: $blue;
+    transition: 0.3s;
+    transform: scale(1.0);
+  }
+
+  @include tablets {
+    right: 8%;
+    top: -8.312rem;
+  }
+
+  @include phones {
+    top: -4rem;
+    right: 1rem;
+  }
+
+  @include phones-small {
+    top: -3rem;
+    width: 5rem;
+    height: 5rem;
+  }
+}
+
+.ingredient__pic {
+  flex-shrink: 0;
+  width: 3.187rem;
+  height: 3.187rem;
+  fill: $white;
+  margin-bottom: 0.625rem;
+
+  @include phones-small {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+}
+
+.ingredient__text {
+  font-size: 14px;
+  font-weight: 600;
+  color: $white;
+  text-transform: uppercase;
+}
+
+.ingredient__dropdown {
+  display: none;
+}

@@ -1,11 +1,20 @@
 .contact {
   text-align: right;
   font-style: normal;
-}
-.contact__phone {
-  color: $white;
-  font-size: 24px;
-  font-weight: normal;
-  text-decoration: none;
+  
+  @include tablets {
+    display: none;
+  }
 }
 
+.contact__phone {
+  color: $white;
+  font-size: rem(24px);
+  font-weight: 400;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  &:before {
+    content: url(../img/welcome/icon/phone.png);
+  }
+}

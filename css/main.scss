@@ -3,11 +3,28 @@ $white: #fff;
 $black: #0d0d0d;
 $green: #0f5a47;
 $grey: #f2f5f4;
+$dark-blue: #00accf;
+$blue: #61c4d9;
+$dark-grey: #666666;
+$chocco: #323232;
+$bg-menu: #2f3234;
+$yellow: #dde3bd;
+$bg-slider: #f8faf9;
+$bg-overlay: #2f3234;
+
+//displays
+
+$tablets: 768px;
+$phones: 480px;
+$phones-small: 378px;
 
 //normalize
 @import "layout/normalize.scss";
 
-//setup
+// mixins
+@import "layout/mixins.scss";
+
+//setups
 @import "layout/basis.scss";
 @import "layout/fonts.scss";
 
@@ -15,10 +32,26 @@ $grey: #f2f5f4;
 @import "blocks/header.scss";
 @import "blocks/nav.scss";
 @import "blocks/contact.scss";
-@import "blocks/fixed-menu.scss";
 @import "blocks/welcome.scss";
+@import "blocks/intro.scss";
 @import "blocks/order.scss";
+@import "blocks/bar-img";
 @import "blocks/desc.scss";
 @import "blocks/advantages.scss";
 @import "blocks/plus.scss";
+@import "blocks/slider.scss";
+@import "blocks/ingredient.scss";
+@import "blocks/dropdown.scss";
+@import "blocks/team.scss";
+@import "blocks/menu.scss";
 @import "blocks/reviews.scss";
+@import "blocks/video.scss";
+@import "blocks/form.scss";
+@import "blocks/btn.scss";
+@import "blocks/map.scss";
+@import "blocks/footer.scss";
+@import "blocks/socials.scss";
+@import "blocks/fixed-menu.scss";
+@import "blocks/hamburger-menu.scss";
+@import "blocks/overlay-menu.scss";
+@import "blocks/modal.scss";

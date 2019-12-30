@@ -1,0 +1,272 @@
+.slider {
+  background-color: $bg-slider;
+
+  &::before {
+    content: "";
+    background: url(../img/slider/raspberries.png) no-repeat;
+    background-size: contain;
+    width: 10.062rem;
+    height: 19.687rem;
+    position: absolute;
+    left: 0;
+    bottom: -114%;
+
+    @include tablets {
+      bottom: -108%
+    }
+
+    @include phones {
+      display: none;
+    }
+  }
+}
+
+.slider__container {
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.slider__btn {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  height: 9rem;
+  z-index: 5;
+}
+
+.slider__btn--left {
+  left: 0%;
+  top: 35%;
+
+
+  @include tablets {
+    left: 17%;
+    top: 28.5%;
+  }
+
+  @include phones {
+    left: 4%;
+    top: 27%;
+  }
+}
+
+.slider__btn--right {
+  right: 0%;
+  top: 35%;
+
+  @include tablets {
+    right: 17%;
+    top: 28.5%;
+  }
+
+  @include phones {
+    right: 4%;
+    top: 27%;
+  }
+}
+
+.slider__arrow {
+  width: 1.5rem;
+  height: 2rem;
+}
+
+.slider__arrow--left {
+  transform: rotate(90deg);
+}
+
+.slider__arrow--right {
+  transform: rotate(-90deg);
+}
+
+.slider__list {
+  display: flex;
+  width: 100%;
+  position: relative;
+  right: 0;
+  transition: right 0.4s;
+  height: 34rem;
+  align-items: center;
+}
+
+.slider__item {
+  display: flex;
+  position: relative;
+  width: 100%;
+  flex-shrink: 0;
+  z-index: 3;
+
+  @include tablets {
+    flex-flow: column;
+    align-items: center;
+  }
+}
+
+.slider__left {
+  flex: 1;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+
+  &::after {
+    content: "";
+    background: url(../img/slider/sheet2.png) no-repeat;
+    background-size: contain;
+    width: 6.187rem;
+    height: 4.562rem;
+    position: absolute;
+    right: 55%;
+    bottom: 6%;
+
+    @include tablets {
+      right: 16%;
+      bottom: 45%;
+    }
+
+    @include phones {
+      width: 5rem;
+      height: 3.687rem;
+      right: 10%;
+      bottom: 61%;
+    }
+  }
+
+  &::before {
+    content: "";
+    background: url(../img/slider/sheet1.png) no-repeat;
+    background-size: contain;
+    width: 4.4rem;
+    height: 5rem;
+    position: absolute;
+    left: 0%;
+    bottom: 64%;
+
+    @include tablets {
+      left: 15%;
+      bottom: 79%;
+    }
+
+    @include phones {
+      width: 3.75rem;
+      height: 4.375rem;
+      left: 8%;
+      bottom: 84%;
+    }
+  }
+}
+
+
+.slider__pic {
+  width: 24.5rem;
+  height: 24.5rem;
+
+  @include phones {
+    width: 19.625rem;
+    height: 19.812rem;
+  }
+
+  @include phones-small {
+    width: 14.625rem;
+    height: 14.812rem;
+  }
+}
+
+.slider__right {
+  flex: 1;
+}
+
+.slider__head {
+  font-size: 36px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 1.375rem;
+  margin-top: 5.312rem;
+
+  @include tablets {
+    margin-top: 2.312rem;
+  }
+
+  @include phones {
+    font-size: 33px;
+  }
+
+  @include phones-small {
+    font-size: 23px;
+  }
+}
+
+.slider__text {
+  font-size: 20px;
+  font-weight: 400;
+  color: $dark-grey;
+  margin-bottom: 2.937rem;
+
+  @include phones {
+    font-size: 16px;
+  }
+
+  @include phones-small {
+    margin-bottom: 1rem;
+  }
+}
+
+.slider__desc {
+  display: flex;
+  width: 50%;
+  justify-content: space-between;
+  text-align: left;
+  z-index: 3;
+
+  @include tablets {
+    width: 90%;
+    justify-content: end;
+    margin-left: 23%;
+  }
+
+  @include phones {
+    width: 100%;
+    justify-content: center;
+    margin: 0;
+  }
+}
+
+.slider__cat {
+
+  @include tablets {
+    margin-left: 9%;
+  }
+}
+
+.slider__cat-text {
+  font-size: 18px;
+  font-weight: 400;
+  color: $chocco;
+}
+
+.slider__cat-desc {
+  font-size: 18px;
+  font-weight: 600;
+  color: $chocco;
+  margin-bottom: 2.375rem;
+}
+
+.slider__options {
+  display: flex;
+
+  @include tablets {
+    justify-content: center;
+  }
+}
+
+.slider__price {
+  font-size: 60px;
+  font-weight: 300;
+  line-height: 60px;
+  text-transform: uppercase;
+  margin-right: 1.937rem;
+
+  @include phones-small {
+    font-size: 46px;
+  }
+}

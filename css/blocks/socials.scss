@@ -1,0 +1,16 @@
+.socials {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.socials__icon {
+  fill: $dark-grey;
+  width: 2rem;
+  height: 1.4rem;
+
+  &:hover {
+    fill: $black;
+    transition: 0.3s;
+    transform: scale(1.0);
+  }
+}
