@@ -484,6 +484,7 @@ const overlay = (function () {
 
   link.classList.add('modal-win__close');
   link.setAttribute('href', '#');
+  link.textContent = ('закрыть')
 
   let openOverlay = function (modalId, content) { // передается id модального окна и содержимое
     let overlay = document.querySelector(modalId);

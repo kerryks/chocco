@@ -330,9 +330,10 @@ body {
   font-family: 'Alegreya Sans', Arial, Helvetica, sans-serif;
   font-weight: 400;
   font-style: normal;
-  text-decoration: none; }
+  text-decoration: none;
+  overflow: auto; }
 
-body.menu-open {
+body.locked {
   overflow: hidden; }
 
 .wrapper {
@@ -2041,34 +2042,40 @@ img {
   background-color: #2f3234;
   opacity: 0.99;
   text-align: center;
-  position: fixed;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
   width: 100%;
   top: 0;
   height: 100%;
   transition: all ease 1s;
   display: none; }
 
-.modal-win__close {
-  position: fixed;
-  width: 1.5rem;
-  height: 1.5rem;
-  cursor: pointer;
-  z-index: 20;
-  transform: rotate(45deg); }
-  .modal-win__close::before {
-    position: fixed;
-    width: 1.5rem;
-    height: 1.5rem;
-    top: 0.5rem;
-    z-index: 20;
-    transform: rotate(-45deg); }
+.modal-win.is-active {
+  display: flex;
+  z-index: 200; }
 
-.close {
-  position: absolute;
+.modal-win__inner {
+  color: #0d0d0d;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 30.05px;
+  width: 17.75rem;
+  height: 11.75rem;
+  box-shadow: 0 0 40px rgba(0, 0, 1, 0.22);
+  background-color: #ffffff;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 4%; }
+
+.modal-win__close {
   padding: 1.25rem 2.1875rem;
   border-radius: 2.8125rem;
   background-color: #0f5a47;
   text-transform: uppercase;
+  text-decoration: none;
   color: #fff;
   font-size: 1.1875rem;
   font-weight: 600;
