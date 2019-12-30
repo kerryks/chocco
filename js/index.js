@@ -647,7 +647,7 @@ function init() {
       },
       {
         iconLayout: 'default#image',
-        iconImageHref: '../img/map/logo.png',
+        iconImageHref: './img/map/logo.png',
         iconImageSize: [46, 57],
         iconImageOffset: [-23, -57]
       });
@@ -656,7 +656,7 @@ function init() {
   let clusterer = new ymaps.Clusterer({
     clusterIcons: [
       {
-        href: '../img/map/logo.png',
+        href: './img/map/logo.png',
         size: [100, 100],
         offset: [-50, -50]
       }
